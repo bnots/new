@@ -1,0 +1,87 @@
+.message-opened
+    .message-opened__info
+        %button.message-opened__back-arrow
+        %h2.message-opened__title Submoldule: improve documentation
+    
+    .message-opened__container
+        .message-opened__head
+            %a.message-opened__codpen{href:'#'} Codepen
+            .message-opened__prev-container
+                %a.message-opened__prev{href:'#'} Show previous message
+                .message-opened__counter
+                    .message-counter 2
+        
+        .message-opened__message-container
+            .add-message.add-message--output
+                .add-message__content
+                    .add-message__photo
+                        %a.add-message__photo{href:'#'}
+                            .avatar_wrapper
+                                %img.add-message__img(src='images/userpic.png' alt='')
+                    .add-message__text-container
+                        .add-message__text
+                            asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+                        .add-message__info
+                            .add-message__user-name
+                                you
+                            .add-message__date-message
+                                Match 22
+            
+            .add-message.add-message--input
+                .add-message__content
+                    .add-message__photo
+                        %a.add-message__photo{href:'#'}
+                            .avatar_wrapper
+                                %img.add-message__img(src='images/userpic.png' alt='')
+                    .add-message__text-container
+                        .add-message__text
+                            asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+                        .add-message__info
+                            .add-message__user-name
+                                Borya
+                            .add-message__date-message
+                                Match 22
+            
+            .add-message.add-message--private
+                .add-message__content
+                    .add-message__photo
+                        .avatar_private
+                            Private
+                    .add-message__text-container
+                        .add-message__text
+                            asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+                        .add-message__info
+                            .add-message__user-name
+                                you
+                            .add-message__date-message
+                                Match 22
+            
+            .add-message.add-message--typing
+                .add-message__content
+                    .add-message__photo
+                        %a.add-message__photo{href:'#'}
+                            .avatar_wrapper
+                                %img.add-message__img(src='images/userpic.png' alt='')
+                    .add-message__text-container
+                        .add-message__info
+                            .add-message__user-name
+                                you
+                            .add-message__typing
+                                is typing...
+    
+        .message-opened__form
+            %form.new-message{action:'#', method:'POST'}
+                .new-message__controls
+                    %ul.new-message__controls-list
+                        %li.new-message__control-item.new-message__control-item--link
+                        %li.new-message__control-item.new-message__control-item--line
+                        %li.new-message__control-item.new-message__control-item--h1.new-message__control-item--active
+                        %li.new-message__control-item.new-message__control-item--h2
+                        %li.new-message__control-item.new-message__control-item--bold.new-message__control-item--inactive
+                        %li.new-message__control-item.new-message__control-item--italic.new-message__control-item--inactive
+                        %li.new-message__control-item.new-message__control-item--list-dot
+                        %li.new-message__control-item.new-message__control-item--list-num
+                        %li.new-message__control-item.new-message__control-item--pic
+                    %textarea.new-message__textarea(name='textarea' id='' cols='' rows='')
+                    
+        %button.message-opened__submit.orange reply

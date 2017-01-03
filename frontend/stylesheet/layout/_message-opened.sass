@@ -1,0 +1,84 @@
+.message-opened
+    margin-bottom: 56px
+    &:last-child
+        margin-bottom: 0
+
+.message-opened__info
+    display: flex
+    align-items: center
+    padding-bottom: 40px
+
+.message-opened__title
+    color: $white
+    font-size: 28px
+    line-height: 36px
+    font-weight: 500
+    user-select: none
+    cursor: default
+    margin-left: 32px
+
+.message-opened__container
+    background-color: $white
+    padding-bottom: $mo-message-padding
+
+.message-opened__back-arrow
+    width: 42px
+    height: 42px
+    border: none
+    cursor: pointer
+    background: url("../images/icon-arrow-left.svg") no-repeat center
+    user-select: none
+    &:focus
+        outline: none
+
+.message-opened__head
+    background-color: $light_gray
+    padding: 0 $mo-message-padding
+    height: 72px
+
+.message-opened__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.message-opened__codpen
+    text-transform: uppercase
+    color: $black
+    display: flex
+    align-items: center
+    font-size: 12px
+    &::before
+        padding-right: 16px
+        content: ''
+        width: 32px
+        height: 32px
+        background: transparent url("../images/codepen_icon.png") no-repeat center
+        background-size: 32px 32px
+
+.message-opened__prev-container
+    display: flex
+    align-items: center
+
+.message-opened__prev
+    text-transform: uppercase
+    color: $black
+    font-size: 12px
+    cursor: pointer
+
+
+.message-opened__counter
+    margin-left: 24px
+
+.message-opened__message-container
+    padding: $mo-message-padding
+    display: flex
+    flex-direction: column
+
+.message-opened__form
+    padding: 0 $mo-message-padding
+
+.message-opened
+    .message-opened__submit
+        margin: 32px $mo-message-padding 0
+        padding: 0 48px
+        font-size: 13px

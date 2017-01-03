@@ -1,0 +1,27 @@
+@import colors 
+@import visibility_mixin
+
+.dialog
+  .dialog_overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100vw
+    height: 100vh
+    background: $black
+    z-index: 101
+    opacity: 0
+
+    @include dialog_overlay_visibility(150ms)
+
+  .dialog_box
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 102
+    transform-origin: 0 0
+
+    @include dialog_box_visibility(150ms)

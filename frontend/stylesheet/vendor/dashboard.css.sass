@@ -1,0 +1,232 @@
+@import colors
+@import mixins
+
+body.app section.dashboard
+  section.projects
+    h1
+      font-size: 36px
+      font-weight: 700
+      color: $white
+
+    > .projects
+      display: flex
+      flex-wrap: wrap
+      margin-top: 32px
+
+      > .project
+        width: calc(50% - 8px)
+        height: 288px
+        background-color: $white
+        color: $black
+        margin-bottom: 16px
+
+        &:nth-child(odd)
+          margin-right: 8px
+        &:nth-child(even)
+          margin-left: 8px
+
+        .color_code
+          height: 6px
+          width: 50%
+        
+        .type
+          width: calc(100% - 24px)
+          text-align: right
+          color: $black_transparent_rgba_04
+          text-transform: uppercase
+          margin: 8px 0 0 0 
+          font-size: 12px
+          font-weight: 500
+          line-height: 24px
+
+          &.private
+            color: $orange
+            background: url("/images/Nots_24_Private.svg") calc(100% - 55px) center no-repeat
+            background-size: 24px 24px
+
+        .wrapper
+          padding: 0 48px
+
+        .title
+          font-size: 28px
+
+        .description
+          font-size: 14px
+          color: $black_transparent_rgba_04
+          margin-top: 8px
+        
+
+        .rate_people_wrapper
+          display: flex
+
+        .fresh_rate_block
+          width: calc(50% - 1px)
+          border-right: 1px solid $black_transparent_rgba_01
+          margin-top: 32px
+          padding-top: 8px
+
+          .rate_title
+            font-size: 14px
+            text-transform: uppercase
+            color: $black_transparent_rgba_04
+            font-weight: 500
+          
+          .fresh_rate
+            margin-top: 16px
+
+            span:first-child
+              font-size: 36px
+              font-size: 70px
+            span:last-child
+              font-size: 40px
+              vertical-align: top
+              line-height: 60px
+
+
+        .people_list
+          width: 50%
+          margin-top: 32px
+          padding-top: 8px
+
+          .people
+            margin-left: 32px
+            li
+              float: left
+              margin-right: 8px
+              margin-bottom: 8px
+              width: 40px
+              height: 40px
+              display: block
+
+              @include userpic(40px)
+            
+            li.add 
+              button
+                &::before
+                  background: url("/images/Nots_25_Plus.svg") 50% 50% no-repeat
+                  background-size: 25px 25px
+                &::after
+                  background: $blue
+
+                &:hover::after
+                  background-color: $blue
+                
+            
+      .add_project
+        background-color: transparent
+
+        a
+          background-color: $white_transparent_rgba_01
+          display: block
+          width: 100%
+          height: 100%
+          display: flex
+          flex-wrap: wrap
+          flex-direction: column
+          justify-content: center
+
+          &:hover .icon 
+            > div:first-child
+              animation: ripple 0.2s ease-out
+              opacity: 1
+            > div:last-child
+              border: 0
+            + span
+              color: $blue
+
+
+          &:hover
+            background-color: $white_transparent_rgba_005
+            
+          .icon
+            position: relative
+            width: 104px
+            height: 104px
+            margin: auto
+
+            > div
+              width: 100%
+              height: 100%
+              position: absolute
+            > div:last-child
+              background: url("/images/Nots_48_Plus_add_new_project.svg") 50% 50% no-repeat
+              background-size: 48px 48px
+              border: 1px solid $white_transparent_rgba_03
+              border-radius: 50%
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+            > div:first-child
+              border-radius: 50%
+              border: 1px solid transparent
+              transform: translate(-50%, -50%)
+              opacity: 0
+              top: 50%
+              left: 50%
+              background-color: $blue
+
+            
+        span
+          text-transform: uppercase
+          text-align: center
+          margin: auto
+          color: $white
+          margin-top: 36px
+          font-weight: 500
+          display: block
+          transition: color 0.1s linear
+
+
+
+  section.timeline
+    margin-top: 32px
+    .header
+      display: flex
+      align-items: center
+      h1
+        font-size: 36px
+        font-weight: 700
+        width: 50%
+        color: $white
+
+      .unread
+        display: inline-block
+        font-size: 11px
+        font-weight: 500
+        padding: 2px 6px
+        background-color: $orange
+        color: $black
+        text-transform: uppercase
+        border-radius: 9px
+        vertical-align: top
+
+      .project
+        width: 50%
+        text-align: right
+
+        .icon, &>img
+          width: 32px
+          height: 32px
+        .icon, .title, .arrow_down
+          margin: auto 0
+          display: inline-block
+          line-height: 32px
+          vertical-align: middle
+        .title
+          margin-left: 8px
+          font-size: 12px
+          font-weight: 500
+          text-transform: uppercase
+          color: $white
+        .arrow_down
+          //display: block
+          background: url("/images/Nots_24_White_triangle.svg") 50% 50% no-repeat
+          background-size: 24px 24px
+          width: 32px
+          height: 32px
+          
+    .time_block > .date
+      margin-top: 20px
+      margin-bottom: 20px
+      color: $white_transparent_rgba_03

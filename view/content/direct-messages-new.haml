@@ -1,0 +1,28 @@
+%section.newmsg
+  %.newmsg__main
+    %.userselect__container
+      %span @User
+
+    %.newmsg__info
+      %span Comma separated list of @Users
+
+    %input.newmsg__title{type: "text", placeholder: "Title"}
+    %.wisywing__conrainer
+
+  %footer.newmsg__footer
+    %button.disabled.newmsg__btn_send send
+    %button.newmsg__btn_cancel cancel
+
+%section.newmsg
+  %.newmsg__main
+    %.userselect__container
+
+    %.newmsg__info
+      %span Comma separated list of @Users
+
+    %input.newmsg__title{type: "text", value: "Ho-ho-ho, Santa has found a bug in your code :P"}
+    %.wisywing__conrainer
+
+  %footer.newmsg__footer
+    %button.active.newmsg__btn_send send
+    %button.newmsg__btn_cancel cancel

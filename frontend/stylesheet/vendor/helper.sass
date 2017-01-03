@@ -1,0 +1,14 @@
+@function pi()
+  @return 3.14159265359
+
+.progress_indicator
+  .to_fill
+    stroke-dasharray: 2 * pi() * 28, 2 * pi() * 28
+    stroke-dashoffset: 2 * pi() * 28
+    transition: stroke-dashoffset 500ms ease-out
+
+  @for $percent from 0 through 100
+    &[data-percent="#{$percent}"] .to_fill
+      stroke-dashoffset: (100 - $percent) / 100 * 2 * pi() * 28 
+
+

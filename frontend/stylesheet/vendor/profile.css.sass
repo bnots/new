@@ -1,0 +1,341 @@
+@import colors
+@import mixins
+
+section.profile
+  > h1.title
+    font-size: 36px
+    font-weight: 700
+    color: $white
+
+  .profile_wrapper
+    margin-top: 32px
+    background-color: $white
+    display: flex
+    padding: 48px
+    padding-bottom: 0
+  
+    .userpic_block
+      width: 144px
+
+      .photo_wrapper
+        width: 96px
+        height: 96px
+        position: relative
+        transition: transform 200ms linear
+
+
+        .existing_photo
+          width: 96px
+          height: 96px
+          position: absolute
+          top: 0
+          left: 0
+
+
+          transform: scale(1)
+          transition: transform 0.15s linear
+
+          &:hover:not(.uploading), &.dragover:not(.uploading)
+            transform: scale(1.09)
+            transition: transform 0.15s linear
+
+            .upload_photo
+              background-color: $black_transparent_rgba_05
+              a
+                opacity: 1
+
+          &.uploading
+            transform: scale(0.77)
+            img
+              filter: grayscale(100%)
+              opacity: 0.25
+            .upload_photo a
+              opacity: 0
+              visibility: hidden
+
+          @include userpic(96px)
+
+          .no_avatar
+            display: none
+
+        .upload_photo
+          width: 96px
+          height: 96px
+          border-radius: 50%
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 2
+          transform: scale(1)
+          transition: background 0.15s linear
+          transition: transform 0.15s linear
+
+          a
+            //color: $black
+            //opacity: 0.4
+            width: 96px
+            height: 96px
+            display: block
+            opacity: 0
+            transform: scale(1)
+            background: url("/images/Nots_40_Photo_White.svg") 50% 50% no-repeat
+            transition: transform 0.15s linear, opacity 0.15s linear
+
+
+        .upload_photo_from_scratch
+          width: 96px
+          height: 96px
+          border: 1px dashed $black_transparent_rgba_02
+          border-radius: 50%
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 2
+          background: url("/images/Nots_40_Photo.svg") 50% 8px no-repeat
+          background-size: 40px 40px
+
+
+          a
+            color: $black
+            opacity: 0.75
+            text-transform: uppercase
+            width: 96px
+            height: 96px
+            text-align: center
+            white-space: pre
+            position: absolute
+            padding-top: 46px
+            font-size: 12px
+        
+        .progress_indicator
+          width: 96px
+          height: 96px
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+
+
+    .profile_info
+
+      .field
+        width: 480px
+        height: 72px
+        display: flex
+        border-bottom: 1px solid $black_transparent_rgba_01
+
+        &.username
+          position: relative
+          input[type=text]
+            font-size: 28px
+            padding-left: 24px
+            color: $black
+          &::before
+            content: "@"
+            display: block
+            position: absolute
+            top: 31px
+            color: $black
+            font-size: 28px
+            font-family: MuseoSansCyrl
+            font-weight: 300
+
+        &.email
+          position: relative
+
+          input[type=email]
+            width: calc(100% - 120px)
+
+          .change_password_link
+            position: absolute
+            right: 0
+            white-space: nowrap
+            bottom: 8px
+            text-transform: uppercase
+            font-size: 12px
+            > a
+              color: $black
+
+
+        &.active
+          border-bottom-width: 2px
+          
+          input[type=email], input[type=text], input[type=password]
+            padding-bottom: 7px
+
+        &.invalid
+          border-bottom-color: $red_05
+
+        input[type=text], input[type=email]
+          align-self: flex-end
+          border: none
+          width: 100%
+          outline: none
+          padding-bottom: 8px
+          font-size: 16px
+          color: $black
+
+          &:invalid, &:-moz-submit-invalid, &:-moz-ui-invalid
+            box-shadow: none
+          
+
+        .validate
+          color: $black
+          height: 33px
+          background: url("/images/Nots_24_Field_error.svg") no-repeat
+          background-size: 24px 24px
+          padding-left: 32px
+          font-size: 12px
+          color: $red_05
+          position: absolute
+          right: -24px
+          top: 60%
+          transform: translateX(100%)
+          padding-top: 4px
+          max-width: 256px
+          
+          @include default_visibility_with_animation(150ms)
+
+
+
+
+
+      .social
+
+        margin-top: 36px
+
+        p.note
+          color: $black_transparent_rgba_04
+        
+        .blocks
+          display: flex
+          margin-top: 16px
+          padding-bottom: 48px
+
+          > div
+            width: 96px
+            height: 96px
+            border: 1px solid $black_transparent_rgba_01
+            border-radius: 4px
+            margin-right: 24px
+            transition: background 0.15s linear
+            &:last-child
+              margin-right: 0
+
+            &:hover
+              background-color: $light_gray
+              border: none
+              transition: background 0.15s linear
+
+            a
+              display: block
+              width: 100%
+              height: 100%
+
+            &.github a
+              background: url("/images/Nots_28_Github.svg") 50% 50% no-repeat
+              background-size: 48px 48px
+            &.facebook a
+              background: url("/images/Nots_48_Social_facebook.svg") 50% 50% no-repeat
+              background-size: 48px 48px
+            &.twitter a
+              background: url("/images/Nots_48_Social_twitter.svg") 50% 50% no-repeat
+              background-size: 48px 48px
+            &.google a
+              background: url("/images/Nots_48_Social_google.svg") 50% 50% no-repeat
+              background-size: 48px 48px
+
+
+  .footer
+    background-color: $light_gray
+    height: 88px
+    display: flex
+    align-items: center
+    padding: 0 48px
+
+    .delete_account
+      flex-grow: 2
+      text-align: right
+      display: flex
+      align-items: center
+
+      a
+        color: $black
+        line-height: 40px
+        height: 40px
+        background: url("/images/Nots_40_Delete.svg") 100% 50% no-repeat
+        background-size: 40px 40px
+        text-transform: uppercase
+        font-size: 12px
+        padding-right: 58px
+        display: inline-block
+        font-weight: 500
+        vertical-align: middle
+        margin-left: auto
+
+
+
+
+
+.change_password_wrapper
+  width: 640px
+  height: 416px
+  background-color: $white
+
+  .change_password_block
+    padding: 40px 48px 48px 48px
+
+    h1
+      font-size: 28px
+      line-height: 36px
+      font-weight: 500
+      color: $black
+      margin-bottom: 11px
+
+    .field
+      height: 64px
+      width: 100%
+      display: flex
+      border-bottom: 1px solid $black_transparent_rgba_01
+
+      input
+        align-self: flex-end
+        border: none
+        width: 100%
+        outline: none
+        padding-bottom: 8px
+        font-size: 16px
+        color: $black
+
+      .passwords_match
+        background: url("/images/Nots_24_Password_match.svg") no-repeat 0 50%
+        background-size: 24px
+        white-space: nowrap
+        height: 28px
+        line-height: 28px
+        margin-bottom: 3px
+        color: $blue
+        padding-left: 32px
+        align-self: flex-end
+
+  .buttons_block
+    padding: 24px 48px
+    height: 88px
+    width: 100%
+    background-color: $light_gray
+    > a, > button
+      display: block
+      float: left
+      margin-right: 24px
+    
+    .cancel
+      height: 40px
+      line-height: 42px
+      text-align: center
+      text-transform: uppercase
+      font-size: 14px
+      letter-spacing: 0.05em
+      color: $black
+
+
+

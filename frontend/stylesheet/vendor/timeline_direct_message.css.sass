@@ -1,0 +1,319 @@
+@import colors
+@import mixins
+
+section.timeline
+  .direct_message
+    background-color: $white
+    position: relative
+    padding: 0px 0px 42px 0px
+    max-height: 328px
+    transition: max-height 0.2s ease-in, height 0.2s ease-in
+    display: flex
+    flex-direction: column
+
+    &.overflow::after
+      display: block
+      content: ""
+      position: absolute
+      bottom: 39px
+      left: 0
+      right: 0
+      height: 64px
+      width: calc(100% - 136px)
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+
+    &.collapsed_to_expanded
+      max-height: 5000px
+      transition: max-height 0.2s ease-out
+
+      .title_line::before
+        height: 100%
+        max-height: 100%
+        opacity: 1
+        transition: max-height 0.1s linear
+
+      .content_block
+        padding-top: 42px
+        transition: padding 0.2s linear
+
+        .content
+          max-height: 10000px
+          transition: max-height 0.2s linear
+
+      .reply_block
+        position: initial
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+        transition: opacity 0.2s linear, transform 0.2s ease-in
+
+      .buttons_block .expand_collapse_button 
+        > div
+          opacity: 1
+          visibility: visible
+          transition: opacity 0.2s linear
+
+      .buttons_block .reply_button
+        opacity: 1
+        visibility: visible
+        transition: opacity 0.2s linear
+
+
+    &.expanded_to_collapsed
+      .reply_button
+        opacity: 0
+        transition: opacity 0.2s linear
+
+      .reply_block
+        position: initial
+        visibility: visible
+        opacity: 0
+        transition: opacity 0.2s linear, transform 0.2s ease-in
+        transform: translateY(-32px)
+
+      .buttons_block
+        .reply_button
+          opacity: 0
+          visibility: visible
+          transition: opacity 0.2s linear
+
+      .title_line
+        &::before
+          height: 100%
+          max-height: 0
+          transition: max-height 0.1s linear
+
+      
+
+    &.expanded
+      max-height: 5000px
+
+      &.overflow::after
+        display: none
+
+      .title_line::before
+        height: 100%
+        max-height: 100%
+        opacity: 1
+
+      .content_block
+        padding-top: 42px
+
+        .content
+          max-height: 10000px
+          &.overflow::after
+            display: none
+
+      .reply_block
+        position: initial
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+
+      .buttons_block
+        .reply_button
+          opacity: 1
+          visibility: visible
+
+      .buttons_block .expand_collapse_button 
+        > div
+          opacity: 1
+          visibility: visible
+
+    &.unread:before
+      position: absolute
+      height: 72px
+      width: 6px
+      left: -6px
+      top: 0
+      background-color: $blue
+      content: ""
+      z-index: 2
+
+    .title_line
+      display: flex
+      align-items: center
+      height: 72px
+      max-height: 72px
+      min-height: 72px
+      position: relative
+
+      &::before
+        content: ""
+        position: absolute
+        width: 100%
+        max-height: 0
+        height: 0
+        background: $light_gray
+        top: 0
+
+      > div
+        position: relative
+
+      .icon
+        margin-left: 16px
+        width: 24px
+        height: 24px
+        background: url("/images/Nots_24_Mail.svg") 50% 50% no-repeat 
+        background-size: 24px 24px
+        margin-right: 8px
+
+      @include userpic(32px)
+
+    .content_replies
+      overflow: hidden
+      flex-grow: 2
+
+    .content_block
+      width: calc(100% - 136px)
+      color: $black
+      padding: 8px 48px 0 48px
+      transition: padding 0.2s linear
+
+      .title
+        font-size: 28px
+        line-height: 36px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+
+      .content
+        padding-top: 8px
+        flex-grow: 2
+        font-size: 16px
+        font-weight: 300
+        line-height: 24px
+        //max-height: 172px
+        text-overflow: clip
+        overflow: hidden
+        position: relative
+        transition: max-height 0.2s ease-out
+        //color: $black_transparent_rgba_05
+
+
+    .replies
+      padding: 56px 48px 0 48px
+      li
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 56px
+        opacity: 1
+        transform: translateY(0)
+        transition: opacity 0.2s linear, transform 0.2s ease-in
+
+        &.new_reply
+          opacity: 0
+          transform: translateY(32px)
+          pointer-events: none
+
+        &.my
+          justify-content: flex-end
+          .userpic
+            order: 2
+            margin-right: 0
+            margin-left: 8px
+          .message
+            order: 1
+            background: $light_grey
+            &::before
+              border-bottom-color: $light_gray
+
+            &::before
+              right: -10px
+              transform: rotateZ(-45deg)
+              left: initial
+          .date
+            order: 3
+
+        .userpic
+          width: 40px
+          height: 40px
+          margin-right: 8px
+
+        .message_date
+          display: flex
+          flex-direction: column
+
+        .message
+          min-height: 56px
+          padding: 16px 24px
+          background: $light_blue
+          line-height: 21px
+          max-width: calc(100% - 50px)
+          position: relative
+
+          &::before
+            content: ""
+            position: absolute
+            width: 0
+            height: 0
+            border-bottom: 8px solid $light_blue
+            border-left: 8px solid transparent
+            border-right: 8px solid transparent
+            transform: rotateZ(45deg)
+            top: -1px
+            left: -10px
+
+
+          .date
+            color: $black_transparent_rgba_02
+            position: absolute
+            width: 300px
+            bottom: -32px
+            left: 0
+
+
+
+        @include userpic(40px)
+    .reply_block
+      //display: none
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      transform: translateY(-32px)
+      margin-top: 40px
+      padding-left: 48px
+      padding-right: 48px
+      margin-bottom: 80px
+      min-width: 864px
+      overflow: hidden
+
+
+        
+    .buttons_block
+      padding-right: 48px
+
+      .reply_button
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        bottom: 48px
+        left: 48px
+
+      .expand_collapse_button
+        position: absolute
+        bottom: 48px
+        right: 48px
+        display: flex
+
+        button.icon_button
+          &::before
+            background: url("/images/Nots_25_Down.svg") 50% 50% no-repeat
+            background-size: 25px 25px
+          &::after
+            background-color: $black_transparent_rgba_01
+
+          &.expanded
+            transform: rotate(180deg)
+            
+
+        > div
+          visibility: hidden
+          opacity: 0
+          height: 40px
+          line-height: 40px
+          vertical-align: middle
+          margin-right: 16px
+          text-transform: uppercase
+          font-size: 12px

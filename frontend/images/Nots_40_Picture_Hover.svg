@@ -1,0 +1,6 @@
+<svg version="1.1" id="Nots" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<path opacity="1" fill="#3399ff" d="M30,10H10c-1.104,0-2,0.896-2,2v15c0,1.104,0.896,2,2,2h20c1.104,0,2-0.896,2-2V12
+	C32,10.896,31.104,10,30,10z M30,12v13.375l-4.705-4.705l-2.461,2.461l2.032,2.031l-1.028,1.029l-7.357-7.355L10,25.316V12H30z"/>
+<circle opacity="1" fill="#3399ff" cx="21.536" cy="16.5" r="2.213"/>
+</svg>

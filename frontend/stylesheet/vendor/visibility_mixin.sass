@@ -1,0 +1,113 @@
+@keyframes ripple
+  0%
+    width: 1px
+    height: 1px
+    opacity: 1
+  80%
+    width: 120%
+    height: 120%
+    opacity: 1
+  100%
+    width: 100%
+    height: 100%
+
+
+@mixin commons
+  &.visible
+    visibility: visible
+    opacity: 1
+    z-index: initial
+
+  &.invisible
+    visibility: hidden
+    opacity: 0
+    z-index: -1
+
+  &.invisible_to_visible
+    visibility: visible
+    opacity: 1
+    z-index: initial
+
+  &.visible_to_invisible
+    //visibility: hidden
+    opacity: 0
+
+@mixin default_visibility_with_animation($duration)
+  @include commons
+
+  &.invisible_to_visible
+    transition: all $duration linear
+
+  &.visible_to_invisible
+    transition: all $duration linear
+
+
+@mixin first_then_second_visibility_with_animation($duration)
+
+  @include commons
+
+  &.visible_to_invisible
+    transition: all $duration/2 linear
+
+  &.invisible_to_visible
+    transition: all $duration/2 linear
+    transition-delay: $duration/2
+
+@mixin sliding_visibility_with_animation($duration, $distance)
+
+  @include commons
+
+  &.invisible
+    transform: translateX($distance)
+    width: 0px
+
+  &.visible
+    transform: translateX(0px)
+
+
+  &.invisible_to_visible
+    transition: opacity $duration ease-in, transform $duration ease-in
+
+  &.visible_to_invisible
+    transition: opacity $duration ease-in, transform $duration ease-in
+    transform: translateX($distance)
+
+@mixin dialog_overlay_visibility($duration)
+  @include commons
+
+  &.visible
+    opacity: 0.95
+    z-index: 101
+
+  &.invisible_to_visible
+    opacity: 0.95
+    transition: opacity $duration linear
+    z-index: 101
+
+  &.visible_to_invisible
+    z-index: 101
+    transition: opacity $duration linear
+
+@mixin dialog_box_visibility($duration)
+  @include commons
+
+
+  &.visible
+    z-index: 102
+
+  &.invisible
+    //transform: scale(0.1) translate(-50%, -50%)
+    transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%)
+
+  &.invisible_to_visible
+    transition: opacity $duration linear, transform $duration linear
+    //transform: scale(1) translate(-50%, -50%)
+    transform: scale3d(1,1,1) translate(-50%, -50%)
+    z-index: 102
+
+  &.visible_to_invisible
+    z-index: 102
+    //transition: opacity $duration linear, transform $duration linear
+    transition: opacity $duration*2 linear
+    //transform: scale(0.1) translate(-50%, -50%)
+    //transform: scale3d(0.1, 0.1, 1) translate(-50%, -50%)

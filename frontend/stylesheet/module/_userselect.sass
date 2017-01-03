@@ -1,0 +1,59 @@
+.user
+  &__select
+    outline: 0
+    min-height: 32px
+    line-height: 32px
+    padding: 0 0 4px
+    position: relative
+    background: $white
+  &__inline
+    display: inline-block
+    height: 32px
+    background: $light_grey
+    border-radius: 16px
+    padding: 4px 16px 4px 4px
+    vertical-align: middle
+    line-height: 1
+    &-pic
+      display: inline-block
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      vertical-align: middle
+      margin-right: 4px
+      overflow: hidden
+      & img
+        width: 100%
+
+.autosuggest
+  position: absolute
+  padding: 10px
+  background: $white
+  border: 1px solid $black_transparent_rgba_01
+  border-radius: 4px
+  transform: translate(0, 8px)
+  display: none
+  &__user
+    display: block
+    border-radius: 13px
+    padding: 2px 12px 2px 2px
+    margin-bottom: 4px
+    line-height: 1
+    &.active
+      background-color: $light_grey
+    &-pic
+      width: 22px
+      height: 22px
+      vertical-align: middle
+      display: inline-block
+      border-radius: 50%
+      overflow: hidden
+      margin-right: 8px
+      & img
+        width: 100%
+    &-name
+      text-transform: uppercase
+      font-size: 12px
+
+
+

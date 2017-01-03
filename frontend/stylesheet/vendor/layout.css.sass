@@ -1,0 +1,486 @@
+@import colors
+@import mixins
+@import helper
+
+@keyframes nav_bg_in
+  0%
+    opacity: 1
+    z-index: 1
+    visibility: visible
+    transform: translateX(-80px)
+
+  100%
+    transform: translateX(0px)
+    opacity: 1
+    z-index: 1
+    visibility: visible
+
+@keyframes nav_bg_out
+  0%
+    transform: translateX(0px)
+    opacity: 1
+    z-index: 1
+    visibility: visible
+
+  100%
+    opacity: 1
+    z-index: 1
+    visibility: visible
+    transform: translateX(-80px)
+
+@keyframes button_animation
+  0%
+    width: 0
+    height: 0
+  100%
+    width: 15vw
+    height: 15vw
+
+@font-face
+  font-family: 'MuseoSansCyrl'
+  src: url('/css/fonts/MuseoSansCyrl 300.woff')
+  font-weight: 300
+  font-style: normal
+
+@font-face
+  font-family: 'MuseoSansCyrl'
+  src: url('/css/fonts/MuseoSansCyrl-700.woff')
+  font-weight: 700
+  font-style: normal
+
+@font-face
+  font-family: 'MuseoSansCyrl'
+  src: url('/css/fonts/MuseoSansCyrl 500.woff')
+  font-weight: 500
+  font-style: normal
+
+html
+  background-color: #112126
+  text-rendering: optimizeLegibility
+  color: $white
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  letter-spacing: 0.02em
+
+
+.hidden
+  display: none !important
+
+a
+  color: $white
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+
+html, body.app
+  width: 100%
+  height: 100%
+  background-color: $black
+  padding: 0
+  margin: 0
+
+html, body.app
+  box-sizing: border-box
+  font-family: 'MuseoSansCyrl', sans-serif
+  color: $black
+  font-weight: 300
+  background-clip: padding-box
+
+body.app *
+  box-sizing: border-box
+
+body.app
+  display: flex
+  font-family: 'MuseoSansCyrl', sans-serif
+  font-weight: 300
+  font-size: 14px
+  flex-wrap: nowrap
+  overflow-x: hidden
+  position: relative
+
+  nav
+    display: flex
+    width: 240px
+    min-width: 240px
+    max-width: 240px
+    margin-right: 24px
+    overflow: hidden
+    position: relative
+
+    a
+      color: $white
+      opacity: 0.5
+      text-decoration: none
+      &:hover
+        opacity: 1
+
+    .grey_profile_bg
+      height: 100%
+      position: absolute
+      background-color: $nav_color
+      width: 80px
+      opacity: 0
+      visibility: hidden
+      z-index: -1
+
+      &.visible
+        transform: translateX(0px)
+        opacity: 1
+        z-index: 1
+        visibility: visible
+      &.invisible_to_visible
+        animation: nav_bg_in 0.2s ease-out
+        animation-fill-mode: forwards
+      &.invisible
+        opacity: 0
+        z-index: -1
+        visibility: hidden
+      &.visible_to_invisible
+        animation: nav_bg_out 0.2s ease-out
+        opacity: 0
+        z-index: -1
+        visibility: hidden
+        transform: translateX(-80px)
+
+    .common_icons
+      z-index: 2
+      width: 80px
+      display: flex
+      flex-direction: column
+
+      > div
+        width: 48px
+        height: 48px
+        min-height: 48px
+
+    .common_icons
+      margin-right: 16px
+      .logo_icon, .dm_icon, .mentions_icon, .bookmarks_icon, .tags_icon, .profile_icon
+
+        & > a
+          width: 48px
+          height: 48px
+          display: block
+
+      .dm_icon, .mentions_icon, .bookmarks_icon, .tags_icon
+        margin: 4px 16px
+        > a
+          opacity: 0.4
+          transition: opacity 0.15s linear
+      .dm_icon
+        margin-top: 0
+
+      .logo_icon
+        margin: 16px
+
+      .logo_icon > a
+        background: url('/images/nots-logo.svg') center no-repeat 
+        opacity: 1
+      .dm_icon > a
+        background-image: url('/images/Nots_48_Messages.svg')
+        &:hover, &.hover
+          opacity: 1
+      .mentions_icon > a
+        background: url('/images/Nots_48_Mentions.svg') center no-repeat 
+        &:hover, &.hover
+          opacity: 1
+      .bookmarks_icon > a
+        background: url('/images/Nots_48_Bookmarks.svg') center no-repeat 
+        &:hover, &.hover
+          opacity: 1
+      .tags_icon > a
+        background: url('/images/Nots_48_Tags.svg') center no-repeat 
+        &:hover, &.hover
+          opacity: 1
+
+      .profile_icon_wrapper
+        margin: 16px
+        flex-grow: 2
+        display: flex
+        &.hover, .profile_icon:hover, .profile_icon.hover, .account_menu:hover
+          .account_menu
+            opacity: 1
+            visibility: visible
+            transition: all 0.2s linear
+
+
+
+        @include userpic(48px)
+        .userpic
+          align-self: flex-end
+          color: $white
+
+
+          > a
+            opacity: 1
+            
+
+        .account_menu
+          padding-left: 16px
+          position: absolute
+          z-index: 2
+          bottom: 6px
+          right: -176px
+          opacity: 0
+          visibility: hidden
+          transition: all 0.2s linear
+
+          .account_menu_block
+            width: 160px
+            height: 192px
+            background-color: $white
+            border: 1px solid $black_transparent_rgba_01
+            border-radius: 4px
+            padding: 8px
+
+            &:after
+              content: ""
+              display: block
+              position: absolute
+              height: 20px
+              width: 9px
+              background: url("/images/user-dialogue-pin-left-9x20.svg") no-repeat
+              left: 9px
+              bottom: 14px
+
+
+
+
+            &, & a
+              color: $black_transparent_rgba_05
+              font-size: 12px
+              font-weight: 500
+              opacity: 1
+
+            li
+              width: 144px
+              height: 40px
+              line-height: 40px
+              vertical-align: middle
+              text-transform: uppercase
+
+              &.delimiter
+                height: 16px
+                position: relative
+                &::after
+                  display: block
+                  content: ""
+                  position: absolute
+                  width: 67%
+                  height: 1px
+                  background-color: $black_transparent_rgba_01
+                  top: 50%
+                  left: 0
+                  right: 0
+                  margin: 0 auto
+              a
+                display: block
+                border-radius: 4px
+                padding: 0 24px
+                
+                &:hover
+                  background-color: $light_gray
+                  color: $black
+                  transition: all 0.1s linear
+
+
+
+    .menu_wrapper
+      position: absolute
+      width: calc(100% - 96px)
+      height: 100%
+      right: 0
+
+    .common_menu
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      @include first_then_second_visibility_with_animation(0.4s)
+
+  
+
+      > div
+        flex-shrink: 0
+        height: 48px
+        min-height: 48px
+        line-height: 48px
+        vertical-align: middle
+        color: $white
+        margin: 4px 0
+
+        a
+          transition: opacity 0.15s linear
+          &.hover
+            opacity: 1
+
+        &.dm_menu
+          margin-top: 0
+
+
+      .logo_menu
+        margin: 16px 0
+        text-transform: uppercase
+        font-size: 12px
+
+      .nickname
+        margin: 16px 0
+        flex-grow: 2
+        display: flex
+        color: $white
+        > div
+          display: inline
+          align-self: flex-end
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          max-width: 144px
+          opacity: 1
+          color: $white
+
+    .profile_menu
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      display: flex
+      flex-direction: column
+      margin-left: 16px
+      @include first_then_second_visibility_with_animation(0.4s)
+
+
+      > div
+        height: 32px
+        min-height: 32px
+        line-height: 32px
+        vertical-align: middle
+        color: $white
+        margin: 4px 0
+        &.username
+          height: 64px
+          line-height: 64px
+          vertical-align: middle
+          margin-top: 8px
+          > *
+            color: $white
+        &.delimiter
+          height: 2px
+          max-height: 2px
+          min-height: 2px
+          background-color: #0d191d
+        &.current a
+          opacity: 1
+        a
+          transition: opacity 0.15s linear
+          &.hover
+            opacity: 1
+    
+  > .content
+    padding-right: 48px
+    width: 100%
+    min-width: 960px + 48px + 8px
+    overflow-y: auto
+    position: relative
+    overflow-x: hidden
+    
+  > .content > header
+    display: flex
+    padding-top: 26px
+    padding-bottom: 16px
+    padding-left: 8px
+    position: fixed
+    background-color: $black
+    width: calc(100% - 240px - 32px - 48px + 8px)
+    z-index: 100
+    min-width: 968px
+
+    .search_box, .top_menu
+      width: 50%
+
+
+    .search_box
+      border-bottom: 1px solid $white_transparent_rgba_03
+      padding-bottom: 10px
+
+      input[type=search]
+        border: none
+        height: 24px
+        width: calc(100% - 30px)
+        font-size: 12px
+        font-weight: 500
+        background-color: transparent
+        color: white
+        outline: none
+        
+        &::-webkit-input-placeholder
+          font-size: 10px
+        &::-moz-placeholder
+          font-size: 10px
+        &:-ms-input-placeholder
+          font-size: 10px
+      input[type=submit]
+        width: 24px
+        height: 24px
+        vertical-align: bottom
+        border: none
+        background: url("/images/Nots_24_White_search.svg") center no-repeat
+        cursor: pointer
+        transition: background 0.15s linear
+        &:hover
+          background: url("/images/Nots_24_White_search_active.svg") center no-repeat
+
+    .top_menu
+      text-align: right
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        height: 37px
+        line-height: 37px
+        vertical-align: middle
+        
+        li
+          display: inline-block
+          margin-right: 20px
+          &:last-child
+            margin-right: 0
+          
+          > a
+            opacity: 1
+            color: $white
+
+
+          &.get_pro
+            a 
+              color: $orange
+            span
+              border-radius: 9px
+              padding: 0 6px
+              display: inline-block
+              background-color: $orange
+              color: $black
+              text-transform: uppercase
+              height: 18px
+              font-size: 11px
+              line-height: 20px
+    
+  main
+    max-height: calc(100% - 128px)  // 37 of height + 64 of padding
+    height: calc(100% - 128px)
+    padding-top: 128px
+    padding-left: 8px
+    width: 100%
+    min-width: 960px + 8px
+    transition: opacity 0.2s linear
+

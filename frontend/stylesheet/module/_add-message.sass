@@ -1,0 +1,106 @@
+.add-message
+    display: flex
+    flex-direction: column
+    margin-bottom: 24px
+    &:last-child
+        margin-bottom: 0
+
+.add-message__content
+    display: flex
+
+.add-message__photo
+    @include userpic(40px)
+
+
+
+.add-message__text
+    padding: 24px
+    position: relative
+    font-size: 16px
+    color: $black
+    &::before, &::after
+        position: absolute
+        top: 0
+        display: none
+        width: 0
+        height: 0
+        content: ''
+        border: $min-padding/2 solid transparent
+        border-top: $min-padding/2 solid transparent
+
+    &::before
+        left: -$min-padding
+        border-right: $min-padding/2 solid transparent
+    &::after
+        right: -$min-padding
+        border-left: $min-padding/2 solid transparent
+
+.add-message__info
+    display: flex
+    margin-top: $min-padding
+    font-size: 14px
+
+.add-message__user-name
+    margin-right: $min-padding
+    color: $black_transparent_rgba_06
+.add-message__date-message, .add-message__typing
+    color: $black_light
+.add-message__typing
+    user-select: none
+    cursor: default
+
+.add-message--input
+    align-self: flex-start
+    .add-message__text-container
+        margin-left: $min-padding
+    .add-message__text
+        background-color: $light_blue
+        &::before
+            display: block
+            border-top-color: $light_blue
+            border-right-color: $light_blue
+    .add-message__info
+        align-self: flex-end
+
+
+.add-message--output
+    align-self: flex-end
+    .add-message__photo
+        order: 2
+    .add-message__text-container
+        margin-right: $min-padding
+    .add-message__text
+        order: 1
+        background-color: $light_grey
+        &::after
+            display: block
+            border-top-color: $light_grey
+            border-left-color: $light_grey
+
+.add-message--private
+    align-self: flex-end
+    .add-message__photo
+        order: 2
+        .avatar_private
+            bottom: auto
+            border-radius: 0
+            margin-bottom: auto
+            text-transform: uppercase
+            color: $orange
+            font-size: 12px
+            width: auto
+            height: auto
+    .add-message__text-container
+        margin-right: $min-padding
+    .add-message__text
+        order: 1
+        background-color: $light_orange
+
+.add-message--typing
+    .add-message__text-container
+        margin-left: $min-padding
+    .add-message__photo
+        @include userpic(32px)
+    .add-message__img
+        width: $mo-photo-size-typing
+        height: $mo-photo-size-typing

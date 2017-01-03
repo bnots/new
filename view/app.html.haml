@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+%html{ lang: "en-US", "xml:lang": "en-US", xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{ charset: "UTF-8"}
+    %meta{ content: "width=device-width, initial-scale=1", name: "viewport"}
+    -#%title Nots.io | Sticky Notes for your Code with Context and Timeline
+    %title Nots.io | Dashboard
+
+    %link{ href: "/favicon/apple-touch-icon-57x57.png", rel: "apple-touch-icon", sizes: "57x57"}
+    %link{ href: "/favicon/apple-touch-icon-60x60.png",  rel: "apple-touch-icon",  sizes: "60x60"}
+    %link{ href: "/favicon/apple-touch-icon-72x72.png",  rel: "apple-touch-icon",  sizes: "72x72"}
+    %link{ href: "/favicon/apple-touch-icon-76x76.png",  rel: "apple-touch-icon",  sizes: "76x76"}
+    
+    %link{ href: "/favicon/apple-touch-icon-144x144.png",  rel: "apple-touch-icon",  sizes: "144x144"}
+    %link{ href: "/favicon/apple-touch-icon-152x152.png",  rel: "apple-touch-icon",  sizes: "152x152"}
+    %link{ href: "/favicon/apple-touch-icon-180x180.png",  rel: "apple-touch-icon",  sizes: "180x180"}
+    %link{ href: "/favicon/favicon-16x16.png",  rel: "icon",  sizes: "16x16",  sizes: "image/png"}
+    %link{ href: "/favicon/favicon-32x32.png",  rel: "icon",  sizes: "32x32",  sizes: "image/png"}
+    %link{ href: "/favicon/favicon-96x96.png",  rel: "icon",  sizes: "96x96",  sizes: "image/png"}
+    %link{ href: "/favicon/android-chrome-192x192.png",  rel: "icon",  sizes: "192x192",  sizes: "image/png"}
+    %link{ href: "/favicon/manifest.json",  rel: "manifest"}
+
+    %meta{ content: "#2b5797", name: "msapplication-TileColor"}
+    %meta{ content: "/favicon/mstile-144x144.png", name: "msapplication-TileImage"}
+    %meta{ content: "#ffffff", name: "theme-color"}
+    %meta{ content: "Sticky Notes for your Code with Context and Timeline", property: "og:title"}
+    %meta{ content: "Nots.io lets you attach sticky notes to your code, files, commits or branches. You can add text, images, uploaded files and code snippets.", name: "description"}
+    %meta{ content: "Nots.io lets you attach sticky notes to your code, files, commits or branches. You can add text, images, uploaded files and code snippets.", property: "og:description"}
+    %link{ href: "http://nots.io", rel: "canonical"}
+    %meta{ content: "http://nots.io", property: "og:url"}
+    %meta{ content: "NotsIO", property: "og:site_name"}
+    %meta{ content: "http://nots.io/images/nots-logo_300x300.png", property: "og:image"}
+    %meta{ content: "summary_large_image", name: "twitter:card"}
+    %meta{ content: "@nots_io", name: "twitter:site"}
+    %meta{ name: "twitter:image", content: "http://nots.io/images/nots-logo_300x300.png"}
+
+    %script{type: "text/javascript", src: "../js/app/app.js"}
+    %script{type: "text/javascript", src: "../js/app/editor.js"}
+
+  %body.app
+    %nav
+      .grey_profile_bg  &nbsp;
+
+      .common_icons
+        .logo_icon
+          %a{href: "#"} ""
+        .dm_icon
+          %a{href: "#"} ""
+        .mentions_icon
+          %a{href: "#"} ""
+        .bookmarks_icon
+          %a{href: "#"} ""
+        .tags_icon
+          %a{href: "#"} ""
+        .profile_icon_wrapper
+          .profile_icon.userpic
+            %a.profile_pic{href: "/"}
+              #h2941.component
+                .avatar_wrapper.hidden
+                  %img{:alt => "Alex2", :src => ""}/
+                .no_avatar.bg_3 AL
+
+            .account_menu
+              .account_menu_block
+                %ul
+                  %li 
+                    %a{href: "#"} Profile
+                  %li 
+                    %a{href: "#"} Billing
+                  %li 
+                    %a{href: "#"} SSH Key
+                  %li.delimiter
+                  %li
+                    %a{href: "#"} Logout
+
+      .menu_wrapper
+        .common_menu
+          .logo_menu 
+            %a{href: "#"} Nots.io
+          .dm_menu 
+            %a{href: "#"} Direct Messages
+          .mentions_menu 
+            %a{href: "#"} Mentions
+          .bookmarks_menu 
+            %a{href: "#"} Bookmarks
+          .tags_menu 
+            %a{href: "#"} Tags
+          .nickname
+            Alex2
+
+        .profile_menu.hidden
+          .username Alex2
+          %div.delimiter
+          %div
+            %a{href: "#"}Profile
+          %div
+            %a{href: "#"}Billing
+            
+          %div
+            %a{href: "#"}SSH Key
+            
+          %div.delimiter
+          %div 
+            %a{href: "#"}Log out
+
+
+    .content
+      %header
+        .search_box
+          %form{"accept-charset" => "UTF-8", :action => "/", :method => "post"}
+            %input#search_q{:name => "search[q]", :placeholder => "SEARCH", :type => "search"}/
+            %input{:type => "submit", :value => ""}/
+        .top_menu
+          %ul
+            %li
+              %a{href: "#"} Help
+            %li
+              %a{href: "#"} Blog
+            %li.get_pro
+              %a{href: "#"} 
+                Get
+                %span pro
+      %main
