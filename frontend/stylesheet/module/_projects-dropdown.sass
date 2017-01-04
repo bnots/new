@@ -1,0 +1,54 @@
+.projects-dropdown
+  color: $white
+  text-transform: uppercase
+  display: inline-block
+  font-size: 12px
+  & span
+    display: inline-block
+    padding-right: 16px
+  &__wrapper
+    display: inline-block
+  &__title
+    background: $black
+    padding: 8px
+    cursor: pointer
+    display: flex
+    align-items: center
+    &:after
+      content: ""
+      display: inline-block
+      border-top: 5px solid $white
+      border-bottom: 0
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      vertical-align: middle
+      margin-left: auto
+      transition: transform 0.3s
+    &.opened:after
+      transform: rotate(180deg)
+  &__list
+    display: inline-block
+    background: $black_transparent_rgba_085
+    padding: 8px
+    border-radius: 4px
+    opacity: 1
+    transition: all 0.3s ease-out
+    &.hidden
+      opacity: 0
+  &__item
+    padding: 4px
+    border-radius: 4px
+    cursor: pointer
+    &:hover
+      background: $dark_transparent_rgba_085
+  &__pic
+    display: inline-block
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    vertical-align: middle
+    margin-right: 8px
+    text-align: center
+    line-height: 30px
+    img
+      width: 100%
