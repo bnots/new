@@ -40,6 +40,8 @@
       border-bottom: 0
     & .tabs-name
       margin-right: 16px
+    &-add
+      height: 88px
   &__delete
     width: 40px
     background: url(/images/Nots_40_Delete.svg) 50% 50% no-repeat
@@ -49,6 +51,7 @@
     outline: 0
     visibility: hidden
     height: 100%
+    cursor: pointer
   &__edit
     width: 40px
     background: url(/images/Nots_40_Edit.svg) 50% 50% no-repeat
@@ -59,3 +62,42 @@
     visibility: hidden
     height: 100%
     margin-right: 8px
+    cursor: pointer
+  &__users
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-left: auto
+    &-list
+      display: flex
+  &__user
+    margin-right: 8px
+    &:last-child
+      margin-right: 16px
+    &-link
+      @include userpic(24px)
+    &-counter
+      height: 24px
+      display: flex
+      align-items: center
+      background: url("../images/Nots_28_Note_yellow.svg") no-repeat left center
+      background-size: contain
+      padding-left: 8px
+    &-num
+      font-size: 16px
+      color: $black
+      font-weight: 500
+      background-color: #ffda8f
+      line-height: 24px
+      border-radius: 4px
+      padding-right: 8px
+  &__addbtn
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid $black_transparent_rgba_05
+    margin-right: 16px
+    &-text
+      color: $black
+      text-transform: uppercase
+      font-size: 12px
