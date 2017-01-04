@@ -93,7 +93,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'direct-messages' ) ),
     new HtmlWebpackPlugin( addHTML( 'direct-messages-new' ) ),
     new HtmlWebpackPlugin( addHTML( 'userselect') ),
-    new HtmlWebpackPlugin( addHTML( 'tag-inside') )
+    new HtmlWebpackPlugin( addHTML( 'tag-inside') ),
+    new HtmlWebpackPlugin( addHTML( 'add-tag') )
 ];
 
 if( NODE_ENV == 'production' ) {
