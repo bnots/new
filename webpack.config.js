@@ -98,7 +98,6 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'tag-inside') ),
     new HtmlWebpackPlugin( addHTML( 'add-tag') ),
     new HtmlWebpackPlugin( addHTML( 'site-components') )
-];
 
 if( NODE_ENV == 'production' ) {
     webpackExports.output.publicPath = '';
