@@ -95,8 +95,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'userselect') ),
     new HtmlWebpackPlugin( addHTML( 'projects-dropdown') ),
     new HtmlWebpackPlugin( addHTML( 'tags') ),
-        new HtmlWebpackPlugin( addHTML( 'tag-inside') ),
-        new HtmlWebpackPlugin( addHTML( 'add-tag') )
+    new HtmlWebpackPlugin( addHTML( 'tag-inside') ),
+    new HtmlWebpackPlugin( addHTML( 'add-tag') )
 
 ];
 
