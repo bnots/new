@@ -67,7 +67,7 @@ const plugins = [
         }, {
             context: __dev,
             from   : 'fonts/**',
-            to     : __dist
+            to     : config.dist.css
         }, {
             context: path.join( config.dev.js, 'vendors' ),
             from   : '**',
@@ -92,7 +92,9 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'index' ) ),
     new HtmlWebpackPlugin( addHTML( 'direct-messages' ) ),
     new HtmlWebpackPlugin( addHTML( 'direct-messages-new' ) ),
-    new HtmlWebpackPlugin( addHTML( 'userselect') )
+    new HtmlWebpackPlugin( addHTML( 'userselect') ),
+    new HtmlWebpackPlugin( addHTML( 'projects-dropdown') ),
+    new HtmlWebpackPlugin( addHTML( 'tags') )
 ];
 
 if( NODE_ENV == 'production' ) {
