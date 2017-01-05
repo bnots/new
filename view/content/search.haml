@@ -1,23 +1,7 @@
 .search
   .search__overlay-left
     .search__close
-  .search__overlay-main
-
-    -#.tabs-menu
-    -#  %a.tabs-menu__item.active{href: "#"}notes
-    -#    %span.tabs-menu__quantity 2
-    -#  %a.tabs-menu__item{href: "#"}projects
-    -#    %span.tabs-menu__quantity 15
-    -#  %a.tabs-menu__item{href: "#"}people
-    -#    %span.tabs-menu__quantity 542
-    -#  %a.tabs-menu__item{href: "#"}branches and commits
-    -#    %span.tabs-menu__quantity 2
-    -#  %a.tabs-menu__item{href: "#"}files and code
-    -#    %span.tabs-menu__quantity 2
-    -#  %a.tabs-menu__item{href: "#"}files and codedirect messages
-    -#    %span.tabs-menu__quantity 2
-
-
+  .search__main
     .tabs-menu
       %a.tabs-menu__item.active{href: "#"}
         %span.tabs-menu__text notes
@@ -35,5 +19,6 @@
         %span.tabs-menu__text files and code
           %span.tabs-menu__quantity 2
       %a.tabs-menu__item{href: "#"}
-        %span.tabs-menu__text files and codedirect messages
+        %span.tabs-menu__text direct messages
           %span.tabs-menu__quantity 2
+    %section.search-results
