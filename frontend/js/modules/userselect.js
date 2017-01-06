@@ -5,7 +5,6 @@ import userSelectTmp from 'content/userselect.haml';
 
 var main = document.querySelector("main");
 main.innerHTML = userSelectTmp;
-console.log(template);
 
 
 
