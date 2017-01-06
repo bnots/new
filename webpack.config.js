@@ -99,7 +99,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'add-tag') ),
     new HtmlWebpackPlugin( addHTML( 'search') ),
     new HtmlWebpackPlugin( addHTML( 'site-components') ),
-    new HtmlWebpackPlugin( addHTML( 'search-components') )
+    new HtmlWebpackPlugin( addHTML( 'search-files-code') ),
+    new HtmlWebpackPlugin( addHTML( 'search-notes') )
 ];
 
 if( NODE_ENV == 'production' ) {
