@@ -77,6 +77,10 @@ const plugins = [
     new webpack.ResolverPlugin(
         new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin( ".bower.json", [ "main" ] )
     ),
+    new webpack.ProvidePlugin( {
+        $     : 'jquery',
+        jQuery: 'jquery'
+    } ),
     new BowerWebpackPlugin( {
         modulesDirectories             : [ "bower_components" ],
         manifestFiles                  : "bower.json",
@@ -105,6 +109,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'search-people') ),
     new HtmlWebpackPlugin( addHTML( 'search-branch-commits') ),
     new HtmlWebpackPlugin( addHTML( 'search-direct-messages') ),
+    new HtmlWebpackPlugin( addHTML( 'bookmarks') ),
 ];
 
 if( NODE_ENV == 'production' ) {
