@@ -1,0 +1,31 @@
+.code-block
+  display: block
+  width: 100%
+  border: 1px solid $black_transparent_rgba_02
+  font-size: 12px
+  &__table
+    width: 100%
+  &__row
+    &:hover
+      & .code-block
+        &__cell
+          &--number
+            background-color: $light_gray
+            color: $black
+  //&--code
+      //background-color: $light_gray
+
+  &__cell
+    height: 24px
+    border: none
+    transition: all .3s
+    &--number
+      width: 56px
+      text-align: right
+      padding-right: 8px
+      border-right: 1px solid $black_transparent_rgba_01
+      color: $black_transparent_rgba_04
+      user-select: none
+      cursor: default
+    &--code
+      padding-left: 8px

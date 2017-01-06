@@ -1,62 +1,65 @@
 .add-tag
+  display: flex
+  justify-content: center
+  background-color: $white
+  flex-direction: column
+  padding: 0 40px
+  &__wrapper
     display: flex
-    justify-content: center
-    background-color: $white
-    flex-direction: column
-    padding: 0 40px
-    &__wrapper
-        display: flex
-        &--input
-            justify-content: space-between
-            align-items: center
-            padding: 24px 0
-            border-bottom: 1px solid $black_transparent_rgba_01
-        &--button
-            padding: 24px 0
+    &--input
+      justify-content: space-between
+      align-items: center
+      padding: 24px 0
+      border-bottom: 1px solid $black_transparent_rgba_01
+    &--button
+      padding: 24px 0
 
-    &__colors-item
-        width: 40px
-        height: 40px
-        border-radius: 4px
-        display: inline-block
-        margin-right: 8px
-        cursor: pointer
-        &:last-child
-            margin-right: 0
-        &--1
-            background-color: $bg_1
-        &--2
-            background-color: $bg_2
-        &--3
-            background-color: $bg_3
-        &--4
-            background-color: $bg_4
-        &--5
-            background-color: $bg_5
-        &--6
-            background-color: $bg_6
-        &--7
-            background-color: $bg_7
-        &--8
-            background-color: $bg_8
-        &--9
-            background-color: $bg_9
-        &--selected
-            position: relative
-            &::before
-                content: ''
-                background: url("../images/Nots_24_White_v_big.svg") no-repeat center
-                background-size: 100%
-                display: block
-                position: absolute
-                width: 24px
-                height: 24px
-                margin: auto
-                top: 0
-                right: 0
-                bottom: 0
-                left: 0
+  &__colors-item
+    width: 40px
+    height: 40px
+    border-radius: 4px
+    display: inline-block
+    margin-right: 8px
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+    &--selected
+      position: relative
+      &::before
+        content: ''
+        background: url("../images/Nots_24_White_v_big.svg") no-repeat center
+        background-size: 100%
+        display: block
+        position: absolute
+        width: 24px
+        height: 24px
+        margin: auto
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
 
-    &__button-add.orange_filled
-        margin-right: 0
-        padding: 0 24px
+    // colors
+    &.colors-bg
+      &--1
+        background-color: $bg_1 !important
+      &--2
+        background-color: $bg_2
+      &--3
+        background-color: $bg_3
+      &--4
+        background-color: $bg_4
+      &--5
+        background-color: $bg_5
+      &--6
+        background-color: $bg_6
+      &--7
+        background-color: $bg_7
+      &--8
+        background-color: $bg_8
+      &--9
+        background-color: $bg_9
+
+  &__button-add.orange_filled
+    margin-right: 0
+    padding: 0 24px
