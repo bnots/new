@@ -10,4 +10,7 @@ main.innerHTML = template;
 import searchProjTemp from 'content/search-projects';
 
 var tabsMenu = document.querySelector(".search-results");
-tabsMenu.innerHTML = searchProjTemp;
+
+import searchPeopleTemp from 'content/search-people';
+
+tabsMenu.innerHTML = searchProjTemp + searchPeopleTemp;

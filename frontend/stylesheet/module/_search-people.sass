@@ -1,0 +1,42 @@
+.search-people
+  &__list
+    margin-bottom: 48px
+  &__item
+    width: 228px
+    padding: 24px
+    background: $white
+    text-align: center
+    position: relative
+    margin-right: 16px
+    margin-bottom: 16px
+    display: inline-block
+    .pro
+      position: absolute
+      top: 16px
+      right: 16px
+      font-size: 11px
+      text-transform: uppercase
+      background-color: $orange
+      color: $white
+      border-radius: 10px
+      padding: 2px 4px
+
+  &__link
+    @include userpic(64px)
+    margin-bottom: 16px
+    display: inline-block
+  &__nick
+    text-transform: uppercase
+    margin-bottom: 16px
+    font-size: 12px
+  &__name
+    margin-bottom: 16px
+  &__bottom
+    display: flex
+    color: $black_transparent_rgba_04
+    line-height: 2
+  &__proj
+    width: 50%
+    border-right: 1px solid $black_transparent_rgba_02
+  &__nots
+    width: 50%
