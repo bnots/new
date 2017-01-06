@@ -18,6 +18,7 @@ function getRandomNum() {
 }
 const userPickContainers = document.querySelectorAll( 'img' );
 for(let img of userPickContainers) {
-    let imgUrl = `https://randomuser.me/api/portraits/men/${getRandomNum()}.jpg`;
+    let gender = getRandomNum() % 2 ? 'women' : 'men';
+    let imgUrl = `https://randomuser.me/api/portraits/${gender}/${getRandomNum()}.jpg`;
     img.setAttribute('src', imgUrl);
 }
