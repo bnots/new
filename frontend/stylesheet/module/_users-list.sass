@@ -11,18 +11,52 @@
     margin-right: 16px
   &__link
     @include userpic(24px)
+  //&__counter
+  //  height: 26px
+  //  display: flex
+  //  align-items: center
+  //  background: url("../images/Nots_28_Note_yellow.svg") no-repeat left center
+  //  background-size: contain
+  //  padding-left: 8px
+  //&__num
+  //  font-size: 16px
+  //  color: $black
+  //  font-weight: 500
+  //  background-color: #ffda8f
+  //  line-height: 26px
+  //  border-radius: 4px
+  //  padding-right: 8px
+  
   &__counter
     height: 26px
+    position: relative
+    z-index: 1
     display: flex
+    justify-content: center
     align-items: center
-    background: url("../images/Nots_28_Note_yellow.svg") no-repeat left center
-    background-size: contain
-    padding-left: 8px
-  &__num
-    font-size: 16px
-    color: $black
-    font-weight: 500
-    background-color: #ffda8f
-    line-height: 26px
-    border-radius: 4px
-    padding-right: 8px
+    padding: 2px 8px 0
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      background: url("../images/Nots_28_Note_yellow.svg") no-repeat left center
+      background-size: auto 100%
+      width: 16px
+      height: 26px
+      z-index: -1
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      right: 0
+      left: 8px
+      background-color: #ffda8f
+      z-index: -1
+      border-radius: 4px
