@@ -77,6 +77,10 @@ const plugins = [
     new webpack.ResolverPlugin(
         new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin( ".bower.json", [ "main" ] )
     ),
+    new webpack.ProvidePlugin( {
+        $     : 'jquery',
+        jQuery: 'jquery'
+    } ),
     new BowerWebpackPlugin( {
         modulesDirectories             : [ "bower_components" ],
         manifestFiles                  : "bower.json",
