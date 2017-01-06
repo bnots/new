@@ -1,0 +1,90 @@
+.search-notes
+  margin-bottom: 80px
+  .bookmarked
+    position: relative
+    &::after
+      content: ''
+      display: block
+      width: 32px
+      height: 32px
+      background: url("../images/Nots_32_Bookmark_yellow.svg") no-repeat center
+      position: absolute
+      top: 0
+      right: 0
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      border: 16px solid transparent
+      border-top: 16px solid $black
+      border-right: 16px solid $black
+
+  display: block
+  &__notes
+    margin-bottom: 40px
+
+  &__container
+    padding: 24px 48px 32px
+    background-color: $white
+    margin-bottom: 16px
+    position: relative
+    &:last-child
+      margin-bottom: 0
+
+  &__logo
+    position: relative
+    margin-bottom: 24px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-100%)
+      margin: auto
+      left: -8px
+      top: 0
+      bottom: 0
+      width: 24px
+      height: 24px
+    &--code
+      &::before
+        background: url("../images/Nots_24_Note_code.svg") no-repeat center
+    &--commit
+      &::before
+        background: url("../images/Nots_24_Note_commit.svg") no-repeat center
+    &--file
+      &::before
+        background: url("../images/Nots_24_Note_file.svg") no-repeat center
+    &--branch
+      &::before
+        background: url("../images/Nots_24_Note_branch.svg") no-repeat center
+        
+  &__title.title-h2
+    color: $black
+    margin-bottom: 0
+
+  &__content
+    color: $black
+    line-height: 2
+    margin: 0
+    margin-right: 88px
+    position: relative
+    &--gradient
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        background: linear-gradient(to bottom, transparent, $white)
+        height: 64px
+        width: 100%
+        bottom: 0
+
+  &__button
+    position: absolute
+    right: 48px
+    bottom: 48px
+
+  &__comments
+    .title-h2
+      margin-bottom: 24px
