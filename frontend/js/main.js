@@ -18,7 +18,6 @@ function getRandomNum() {
 }
 const userPickContainers = document.querySelectorAll( 'img' );
 for(let img of userPickContainers) {
-    console.log( img );
     let imgUrl = `https://randomuser.me/api/portraits/men/${getRandomNum()}.jpg`;
     img.setAttribute('src', imgUrl);
 }
