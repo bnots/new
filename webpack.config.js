@@ -100,7 +100,10 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'search') ),
     new HtmlWebpackPlugin( addHTML( 'site-components') ),
     new HtmlWebpackPlugin( addHTML( 'search-files-code') ),
-    new HtmlWebpackPlugin( addHTML( 'search-notes') )
+    new HtmlWebpackPlugin( addHTML( 'search-notes') ),
+    new HtmlWebpackPlugin( addHTML( 'search-projects') ),
+    new HtmlWebpackPlugin( addHTML( 'search-people') ),
+    new HtmlWebpackPlugin( addHTML( 'search-direct-messages') ),
 ];
 
 if( NODE_ENV == 'production' ) {
