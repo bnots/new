@@ -1,6 +1,6 @@
 import 'style.sass';
 
-import template from 'content/direct-messages.haml';
+import template from 'empty-states/bookmarks.haml';
 
 var main = document.querySelector("main");
 
