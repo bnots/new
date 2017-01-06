@@ -103,6 +103,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'search-notes') ),
     new HtmlWebpackPlugin( addHTML( 'search-projects') ),
     new HtmlWebpackPlugin( addHTML( 'search-people') ),
+    new HtmlWebpackPlugin( addHTML( 'search-branch-commits') ),
     new HtmlWebpackPlugin( addHTML( 'search-direct-messages') ),
 ];
 

@@ -1,0 +1,48 @@
+.search-branch
+  margin-bottom: 80px
+
+  &__branch
+    margin-bottom: 40px
+
+  &__container
+    background-color: $white
+    padding: 24px 32px 32px
+    display: flex
+
+  &__logo
+    width: 144px
+    margin-right: 40px
+
+  &__content
+    line-height: 2
+    color: $black
+    font-size: 16px
+    position: relative
+    margin-left: 24px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-100%)
+      margin: 4px auto auto
+      left: -8px
+      top: 0
+      bottom: 0
+      width: 24px
+      height: 24px
+    &--commit
+      &::before
+        background: url("../images/Nots_24_Note_commit.svg") no-repeat center
+    &--branch
+      &::before
+        background: url("../images/Nots_24_Note_branch.svg") no-repeat center
+
+  &__date
+    color: $black_transparent_rgba
+    font-size: 12px
+    font-weight: 300
+
+  &__users
+    margin-left: auto
+    display: flex
+    align-items: flex-start
