@@ -1,0 +1,81 @@
+.direct
+  .tabs-menu
+    display: flex
+    align-items: flex-end
+    margin-bottom: 32px
+    &__item
+      font-size: 14px
+      color: $white_transparent_rgba
+      font-weight: 700
+      text-transform: uppercase
+      margin-right: 48px
+      line-height: 20px
+      padding-bottom: 6px
+      position: relative
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        border-bottom: 2px solid $white_transparent_rgba
+        width: 0
+        height: 2px
+        transition: width 0.3s
+      &:hover:after
+        width: 100%
+      &.active
+        color: $orange
+        &:after
+          border-bottom: 2px solid $orange
+          width: 100%
+    &__quantity
+      color: $white
+      font-weight: 300
+      font-size: 12px
+      position: absolute
+      left: calc(100% + 8px)
+      bottom: 12px
+
+.search
+  .tabs-menu
+    display: flex
+    align-items: flex-end
+    margin-bottom: 32px
+    &__item
+      font-size: 14px
+      color: $white_transparent_rgba
+      font-weight: 700
+      text-transform: uppercase
+      margin-right: 48px
+      line-height: 20px
+      padding-bottom: 6px
+      position: relative
+      font-size: 0
+      &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        border-bottom: 2px solid $white_transparent_rgba
+        width: 0
+        height: 2px
+        transition: width 0.3s
+      &:hover:after
+        width: 100%
+      &.active
+        color: $orange
+        &:after
+          border-bottom: 2px solid $orange
+          width: 100%
+    &__text
+      position: relative
+      font-size: 16px
+    &__quantity
+      color: $white
+      font-weight: 300
+      font-size: 12px
+      position: absolute
+      left: calc(100% + 4px)
+      bottom: 4px
+

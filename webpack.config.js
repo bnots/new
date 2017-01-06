@@ -97,6 +97,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'tags') ),
     new HtmlWebpackPlugin( addHTML( 'tag-inside') ),
     new HtmlWebpackPlugin( addHTML( 'add-tag') ),
+    new HtmlWebpackPlugin( addHTML( 'search') ),
     new HtmlWebpackPlugin( addHTML( 'site-components') ),
     new HtmlWebpackPlugin( addHTML( 'search-components') )
 ];
