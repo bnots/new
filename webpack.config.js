@@ -111,6 +111,16 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'search-direct-messages') ),
     new HtmlWebpackPlugin( addHTML( 'bookmarks') ),
     new HtmlWebpackPlugin( addHTML( 'empty-branches') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-commits') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-code') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-docs') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-mentions') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-notes') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-project-mentions') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-tagged') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-tags') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-timeline') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-history') ),
 ];
 
 if( NODE_ENV == 'production' ) {
