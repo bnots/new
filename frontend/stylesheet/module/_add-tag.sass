@@ -39,26 +39,7 @@
         bottom: 0
         left: 0
 
-    // colors
-    &.colors-bg
-      &--1
-        background-color: $bg_1 !important
-      &--2
-        background-color: $bg_2
-      &--3
-        background-color: $bg_3
-      &--4
-        background-color: $bg_4
-      &--5
-        background-color: $bg_5
-      &--6
-        background-color: $bg_6
-      &--7
-        background-color: $bg_7
-      &--8
-        background-color: $bg_8
-      &--9
-        background-color: $bg_9
+    @include colors-with-bg()
 
   &__button-add.orange_filled
     margin-right: 0

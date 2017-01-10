@@ -1,0 +1,20 @@
+.empty-bookmarks
+  padding: 64px
+  background-color: $white_transparent_rgba_03
+
+  &__template
+    padding: 24px 40px
+    background-color: $white
+  &__user
+    @include userpic(40px)
+    display: flex
+    align-items: center
+
+    &-pic
+      margin-right: 16px
+    &-name
+      text-transform: uppercase
+      color: $black
+      margin-bottom: 4px
+  &__date
+    color: $black_transparent_rgba
