@@ -1,15 +1,15 @@
-.empty-branches
+.empty-code
   padding: 56px 0
   background-color: $white_transparent_rgba_01
   user-select: none
   &__pic
-    @include empty-pic('Nots_64_Branches.svg')
+    @include empty-pic('Nots_64_Code.svg')
 
   &__text
     margin-bottom: 24px
   @include empty-text()
 
-  & > button.empty-branches__button.orange
+  & > button.empty-code__button.orange
     display: flex
     align-items: center
     text-transform: uppercase
@@ -24,8 +24,8 @@
       margin-right: 16px
     &:hover
       &::after
-        width: 400px
-        height: 400px
+        width: 410px
+        height: 410px
         animation: button_animation_long .3s ease-out
 
       svg
