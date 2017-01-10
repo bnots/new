@@ -4,39 +4,44 @@
     .search__close
   .search__main
     .search__container
-      .search__input
-        %span.search__input-options +
+      .search__box
+        %span.search__input-options.plus +
         %span.search__input-options in
         %span.search__input-options comments
-        %span. regular text
-      .search-submit
-    .search_auto-suggest
-      .search__wrapper
-        .search__suggest-list
-          .search__suggest
-            %span piece
-          .search__suggest
-            %span.target big boobs
-          .search__suggest
-            %span.target in
-          .search__suggest
-            %span.target comments
-          .search__suggest
-            %span is god exist?
-        .search__description
-          .search__description-text notes, comments, projects,
-          .search__description-text notes, comments, projects,
-          .search__description-text notes, comments, projects,
-          .search__description-text notes, comments, projects,
-          .search__description-text notes, comments, projects,
-      .search__options-box
-        %span Type
-        %span.search__options +
-        %span.search__options in
-        %span.search__options from
-        %span.search__options last
-        %span for additional options
-    %span.search__options
+        %input.search__input{name:"search[q]", placeholder:"SEARCH", type:"search", value: "regular text"}
+      %input.search-submit{type: "submit", value:""}
+      .search_auto-suggest
+        .search__wrapper
+          .search__suggest-list
+            .search__suggest
+              %span piece
+            .search__suggest
+              %span.target big boobs
+            .search__suggest
+              %span in
+            .search__suggest
+              %span comments
+            .search__suggest
+              %span is god exist?
+        .search__options-box
+          %span Type
+          %span.search__plus +
+          %span for additional options
+
+      .search_auto-suggest-plus
+        .search__wrapper
+          .search__suggest-row
+            .search__options
+              %span.target in
+            .search__description notes, comments, projects,
+          .search__suggest-row
+            .search__options
+              %span from
+            .search__description user
+          .search__suggest-row
+            .search__options
+              %span last
+            .search__description day, week
 
 
 
