@@ -50,10 +50,6 @@
       background-color: $bg_9
 
 @mixin empty-text()
-  &__text
-    text-align: center
-    padding: 64px 0 72px
-
   &__title
     font-size: 28px
     font-weight: 500
@@ -67,3 +63,9 @@
     line-height: 1.5
     color: $white_transparent_rgba
     text-align: center
+
+@mixin empty-pic($imageName)
+  background: url("#{$imgurl}/#{$imageName}") no-repeat center
+  width: 64px
+  height: 64px
+  margin: 0 auto 24px
