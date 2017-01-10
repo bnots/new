@@ -1,20 +1,92 @@
 .empty-bookmarks
-  padding: 64px
-  background-color: $white_transparent_rgba_03
-
+  padding: 48px 48px 0
+  background-color: $white_transparent_rgba_01
+  user-select: none
   &__template
-    padding: 24px 40px
+    padding: 16px 48px
     background-color: $white
-  &__user
-    @include userpic(40px)
     display: flex
     align-items: center
+    position: relative
+    &::before, &::after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+    &::before
+      background: url("../images/Nots_32_Bookmark_yellow.svg") no-repeat center
+      width: 34px
+      height: 34px
+      border-top: 1px dashed $white
+      border-right: 1px dashed $white
+      background-position: 2px -2px
+      z-index: 1
+    &::after
+      border: 16px solid transparent
+      border-top: 16px solid $black_transparent_rgba_09
+      border-right: 16px solid $black_transparent_rgba_09
+
+  &__user
+    @include userpic(32px)
+    display: flex
+    align-items: center
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      width: 24px
+      height: 24px
+      background: url("../images/Nots_24_Note_commit.svg") no-repeat center
+      transform: translate(-100%, -50%)
+      left: -8px
+      top: 50%
 
     &-pic
-      margin-right: 16px
+      margin-right: 8px
     &-name
       text-transform: uppercase
       color: $black
-      margin-bottom: 4px
+      margin-bottom: 2px
+      font-size: 12px
+      user-select: none
+      cursor: default
   &__date
     color: $black_transparent_rgba
+    font-size: 12px
+    user-select: none
+    cursor: default
+
+  // button
+  &__button
+    border: 1px solid $black_transparent_rgba_02
+    color: $black
+    text-transform: uppercase
+    border-radius: 4px
+    padding: 4px 8px
+    margin-left: 24px
+    font-size: 12px
+    cursor: default
+
+  &__pic-link
+    background: url("../images/Nots_40_Link.svg") no-repeat center
+    width: 40px
+    height: 40px
+    margin-left: auto
+
+  &__text
+    text-align: center
+    color: $white
+    padding: 64px 0 72px
+
+  &__title
+    font-size: 28px
+    font-weight: 500
+    margin-bottom: 16px
+
+  &__desc
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.5
+    color: $white_transparent_rgba
