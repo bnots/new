@@ -110,6 +110,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'search-branch-commits') ),
     new HtmlWebpackPlugin( addHTML( 'search-direct-messages') ),
     new HtmlWebpackPlugin( addHTML( 'bookmarks') ),
+    new HtmlWebpackPlugin( addHTML( 'empty-branches') ),
 ];
 
 if( NODE_ENV == 'production' ) {
