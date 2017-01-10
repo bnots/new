@@ -1,0 +1,65 @@
+%section.empty-notes
+  %h1.title-h1 Notes
+  .tabs-menu
+    %a.tabs-menu__item.active{href: "#"}
+      %span.tabs-menu__text all notes
+        %span.tabs-menu__quantity 2
+    %a.tabs-menu__item{href: "#"}
+      %span.tabs-menu__text my notes
+        %span.tabs-menu__quantity 15
+    %a.tabs-menu__item{href: "#"}
+      %span.tabs-menu__text bookmarked
+        %span.tabs-menu__quantity 378
+  %section.empty-notes__main
+    .empty-notes__types
+
+      .empty-notes__box
+        .empty-notes__inner-box
+          .empty-notes__item.code
+            .empty-notes__img
+            .empty-notes__line{style: "background-color: #66ff66"}
+            .empty-notes__quantity
+        .empty-notes__text code note
+
+      .empty-notes__box
+        .empty-notes__inner-box
+          .empty-notes__item.file
+            .empty-notes__img
+            .empty-notes__line{style: "background-color: #8dff33"}
+          .empty-notes__quantity
+            %span 6
+        .empty-notes__text file note
+
+      .empty-notes__box
+        .empty-notes__inner-box
+          .empty-notes__item.commit
+            .empty-notes__img
+            .empty-notes__line{style: "background-color: #b3ff00"}
+          .empty-notes__quantity
+            %span 38
+        .empty-notes__text commit note
+
+      .empty-notes__box
+        .empty-notes__inner-box
+          .empty-notes__item.private
+            .empty-notes__img
+            .empty-notes__line{style: "background-color: #d9ff00"}
+          .empty-notes__quantity
+            %span P
+        .empty-notes__text private note
+
+      .empty-notes__box
+        .empty-notes__inner-box
+          .empty-notes__item.branch
+            .empty-notes__img
+            .empty-notes__line{style: "background-color: #ffff00"}
+          .empty-notes__quantity
+            %span 6
+        .empty-notes__text branch note
+
+
+    .empty-notes__title You don't have any notes yet
+    .empty-notes__desc
+      %span Notes are the core of our service. You can add notes to code, files, commits or branches.
+      %span All notes made are visible to your teammates, and you can create private notes
+      %span (visible to you only) as well.

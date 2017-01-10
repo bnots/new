@@ -1,0 +1,75 @@
+.empty-notes
+  @include empty-text
+  .empty-notes__desc
+    display: flex
+    flex-direction: column
+  &__title
+    margin-bottom: 8px
+  .title-h1
+    margin-bottom: 40px
+  &__main
+    background: $white_transparent_rgba_01
+    padding: 80px 48px 80px
+  &__types
+    display: flex
+    justify-content: space-around
+    max-width: 500px
+    margin: 0 auto 48px
+  &__box
+    text-align: center
+    flex-basis: 100px
+  &__inner-box
+    position: relative
+    width: 32px
+    margin: auto
+  &__item
+    width: 32px
+    height: 32px
+    background-image: url("../images/0Nots_24_Document.svg")
+    background-size: 120%
+    background-position: -3px -2px
+    border-radius: 4px
+    position: relative
+    overflow: hidden
+    margin: 0 auto 12px
+    &.code
+      .empty-notes__img
+        background: url("../images/Nots_24_Note_code.svg")
+    &.file
+      .empty-notes__img
+        background: url("../images/Nots_24_Note_file.svg")
+    &.commit
+      .empty-notes__img
+        background: url("../images/Nots_24_Note_commit.svg")
+    &.private
+      .empty-notes__img
+        background: url("../images/Nots_24_Note_code.svg")
+      &+.empty-notes__quantity
+        background-color: #ffab00
+    &.branch
+      .empty-notes__img
+        background: url("../images/Nots_24_Note_branch.svg")
+  &__img
+    width: 28px
+    height: 28px
+    margin: 1px auto 0
+
+  &__line
+    height: 4px
+    width: 100%
+  &__text
+    color: $blue
+    font-size: 12px
+  &__quantity
+    background-color: $black
+    color: $white
+    border-radius: 10px
+    position: absolute
+    top: 0
+    right: 0
+    transform: translate(50%, -50%)
+    span
+      display: inline-block
+      padding: 2px 6px
+      font-size: 12px
+
