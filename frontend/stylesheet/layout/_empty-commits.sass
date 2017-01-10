@@ -1,7 +1,9 @@
 .empty-commits
-  padding: 56px 0
-  background-color: $white_transparent_rgba_01
-  user-select: none
+
+  &__content
+    padding: 56px 0
+    background-color: $white_transparent_rgba_01
+    user-select: none
   &__pic
     @include empty-pic('Nots_64_Commits.svg')
 
@@ -9,7 +11,7 @@
     margin-bottom: 24px
   @include empty-text()
 
-  & > button.empty-commits__button.orange
+  & button.empty-commits__button.orange
     display: flex
     align-items: center
     text-transform: uppercase
