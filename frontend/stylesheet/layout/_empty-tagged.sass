@@ -1,0 +1,39 @@
+.empty-tagged
+  &__content
+    padding: 56px 0
+    background-color: $white_transparent_rgba_01
+    user-select: none
+  &__tags
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: row wrap
+    width: 50%
+    margin: 0 auto 32px
+    cursor: default
+  &__tag
+    margin: 5px
+  &__text
+    margin-bottom: 24px
+  @include empty-text()
+
+  &__button
+    text-align: center
+    &-desc
+      text-transform: uppercase
+      color: $white
+
+  &__plus
+    width: 40px
+    height: 40px
+    border: 1px solid $white_transparent_rgba
+    border-radius: 50%
+    margin-bottom: 16px
+    cursor: pointer
+    //plus
+    background-color: transparent
+    color: $white
+    font-size: 32px
+    line-height: 1
+    &:focus
+      outline: none
