@@ -1,8 +1,34 @@
 .users-list
+  margin-left: auto
+  margin-top: 4px
+  position: relative
+  min-width: 192px
   display: flex
   justify-content: flex-end
-  align-items: center
-  margin-left: auto
+
+  &__button
+    width: 24px
+    height: 24px
+    display: block
+    border: 1px solid $black_transparent_rgba
+    font-size: 18px
+    border-radius: 50%
+    margin-right: auto
+    &:focus
+      outline: none
+
+  &__container-wrapper
+    background-color: $white
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    overflow: hidden
+
+  &__container
+    display: flex
+    justify-content: flex-end
+
   &__wrapper
     display: flex
   &__item
