@@ -20,5 +20,5 @@ const userPickContainers = document.querySelectorAll( 'img' );
 for(let img of userPickContainers) {
     let gender = getRandomNum() % 2 ? 'women' : 'men';
     let imgUrl = `https://randomuser.me/api/portraits/${gender}/${getRandomNum()}.jpg`;
-    img.setAttribute('src', imgUrl);
+    if(img.getAttribute( 'class' ) !== 'proj-pic') img.setAttribute('src', imgUrl);
 }
