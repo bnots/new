@@ -9,7 +9,7 @@ main.innerHTML = template;
 
 import dropdowntmp from 'content/projects-dropdown.haml';
 
-var dropdownContainer = document.querySelector(".tags__projects-dropdown");
+var dropdownContainer = document.querySelector(".projects-dropdown__box");
 dropdownContainer.innerHTML = dropdowntmp;
 
 var dropdown = document.querySelector(".projects-dropdown__title");
