@@ -1,13 +1,11 @@
-import 'style.sass';
+import dropdowntmp from 'content/projects-dropdown.haml';
 
-
-import template from 'content/projects-dropdown';
-
-var main = document.querySelector("main");
-main.innerHTML = template;
+var dropdownContainer = document.querySelector(".projects-dropdown__box");
+dropdownContainer.innerHTML = dropdowntmp;
 
 var dropdown = document.querySelector(".projects-dropdown__title");
 var dropdownlist = document.querySelector(".projects-dropdown__list");
+
 dropdown.addEventListener( "click" , function() {
     this.classList.toggle( "opened" );
     dropdownlist.classList.toggle( "hidden" )
@@ -16,7 +14,7 @@ dropdown.addEventListener( "click" , function() {
 
 dropdownlist.addEventListener( "click" , function(event) {
     var target = event.target;
-
+console.log(clicked);
     while (target != dropdownlist) {
         if (target.tagName === 'LI') {
             console.log(target);
