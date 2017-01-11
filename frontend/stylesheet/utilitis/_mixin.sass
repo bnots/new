@@ -28,6 +28,13 @@
       color: $bg_9
       border-color: $bg_9
 
+@mixin colors-with-border-05($parent-class: colors-border)
+  &.#{$parent-class}
+    @for $i from 1 through length($bgs)
+      &--#{$i}
+        color: nth($bgs, $i)
+        border-color: rgba(nth($bgs, $i), 0.5)
+
 @mixin colors-with-bg($parent-class: colors-bg)
   &.#{$parent-class}
     &--1
