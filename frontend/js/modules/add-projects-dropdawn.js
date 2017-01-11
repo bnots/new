@@ -1,7 +1,9 @@
 import dropdowntmp from 'content/projects-dropdown.haml';
 
 var dropdownContainer = document.querySelector(".projects-dropdown__box");
+
 dropdownContainer.innerHTML = dropdowntmp;
+    
 
 var dropdown = document.querySelector(".projects-dropdown__title");
 var dropdownlist = document.querySelector(".projects-dropdown__list");
@@ -29,3 +31,5 @@ console.log(clicked);
     }
 
 });
+
+
