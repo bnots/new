@@ -1,6 +1,14 @@
 .create-project
   background-color: $white
   margin-bottom: 56px
+  &__selected-color
+    position: absolute
+    top: 0
+    margin: auto
+    height: 6px
+    left: 0
+    right: 0
+    @include colors-with-bg()
   &__container
     display: flex
     border-bottom: 1px solid $black_transparent_rgba_01
@@ -12,6 +20,7 @@
     padding-top: 48px
     padding-left: 48px
     flex-shrink: 0
+    position: relative
   &__info
     flex-grow: 1
   &__photo
@@ -59,7 +68,7 @@
       display: flex
       justify-content: space-between
     &-title
-      color: $black_transparent_rgba_08
+      color: $black
       font-size: 16px
       margin-bottom: 16px
 
@@ -84,16 +93,12 @@
             right: 0
             bottom: 0
             left: 0
-          &--0
+          &--white
             &::before
               background: url("#{$imgurl}/Nots_24_Black_v_big.svg") no-repeat center
-
-    &--0
-      background-color: $white
+    &--white
       border: 1px solid $black_transparent_rgba_02
-    @include colors-with-bg(create-project__color)
-
-
+    @include colors-with-bg()
   //files
   &__files
     @include create-project_block-name(-name)
@@ -144,6 +149,7 @@
           height: 28px
           margin-right: 16px
 
+
   //team
   &__team
     @include create-project_block-name(-name)
@@ -154,6 +160,37 @@
       margin-bottom: 8px
     &-label
       color: $black_transparent_rgba
+
+  //ssh
+  &__ssh
+    &-arrow
+      &.icon_button
+        &::before
+          background: url("#{$imgurl}/icon-arrow-left-black.svg") no-repeat center
+    &-title
+      color: $black
+      font-size: 16px
+      margin: 56px 0 16px
+    &-desc
+      color: $black_transparent_rgba
+    
+    &-more
+      display: block
+      color: $blue
+      margin: 16px 0 32px
+    &-textarea
+      width: 100%
+      font-size: 16px
+      line-height: 2
+      resize: none
+      border: none
+      border-bottom: 1px solid $black_transparent_rgba_01
+      margin-bottom: 24px
+      &:focus
+        outline: none
+    &-add
+      margin-bottom: 48px
+
   &__buttons
     display: flex
     background-color: $light_gray
@@ -165,10 +202,13 @@
 .user__select
   display: flex
   width: 100%
+  span
+    width: 100%
+
   &-input
-    flex-grow: 1
     border: none
     font-size: 16px
+    height: 32px
     color: $black
     &:focus
       outline: none

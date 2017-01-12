@@ -2,6 +2,7 @@
   %form.create-project__form{action:'#', method:'POST'}
     .create-project__container
       .create-project__title
+        .create-project__selected-color.colors-bg--6
         .create-project__photo
       
       .create-project__info
@@ -42,26 +43,26 @@
           .create-project__colors
             .create-project__colors-title Color label
             .create-project__colors-container
-              %input#projColors--0.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-0', checked:'checked'}
-              %label.create-project__color.create-project__color--0{for:'projColors--0'}
-              %input#projColors--1.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-1'}
-              %label.create-project__color.create-project__color--1{for:'projColors--1'}
-              %input#projColors--2.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-2'}
-              %label.create-project__color.create-project__color--2{for:'projColors--2'}
-              %input#projColors--3.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-3'}
-              %label.create-project__color.create-project__color--3{for:'projColors--3'}
-              %input#projColors--4.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-4'}
-              %label.create-project__color.create-project__color--4{for:'projColors--4'}
-              %input#projColors--5.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-5'}
-              %label.create-project__color.create-project__color--5{for:'projColors--5'}
-              %input#projColors--6.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-6'}
-              %label.create-project__color.create-project__color--6{for:'projColors--6'}
-              %input#projColors--7.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-7'}
-              %label.create-project__color.create-project__color--7{for:'projColors--7'}
-              %input#projColors--8.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-8'}
-              %label.create-project__color.create-project__color--8{for:'projColors--8'}
-              %input#projColors--9.create-project__color-radio{type:'radio', name:'create-project__colors', value:'color-9'}
-              %label.create-project__color.create-project__color--9{for:'projColors--9'}
+              %input#projColors--0.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--0', checked:'checked'}
+              %label.create-project__color.create-project__color--white.colors-bg--0{for:'projColors--0'}
+              %input#projColors--1.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--1'}
+              %label.create-project__color.colors-bg--1{for:'projColors--1'}
+              %input#projColors--2.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--2'}
+              %label.create-project__color.colors-bg--2{for:'projColors--2'}
+              %input#projColors--3.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--3'}
+              %label.create-project__color.colors-bg--3{for:'projColors--3'}
+              %input#projColors--4.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--4'}
+              %label.create-project__color.colors-bg--4{for:'projColors--4'}
+              %input#projColors--5.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--5'}
+              %label.create-project__color.colors-bg--5{for:'projColors--5'}
+              %input#projColors--6.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--6'}
+              %label.create-project__color.colors-bg--6{for:'projColors--6'}
+              %input#projColors--7.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--7'}
+              %label.create-project__color.colors-bg--7{for:'projColors--7'}
+              %input#projColors--8.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--8'}
+              %label.create-project__color.colors-bg--8{for:'projColors--8'}
+              %input#projColors--9.create-project__color-radio{type:'radio', name:'create-project__colors', value:'colors-bg--9'}
+              %label.create-project__color.colors-bg--9{for:'projColors--9'}
     
     
     .create-project__container
@@ -87,7 +88,7 @@
                   .user__inline-pic
                     %img{src:"images/userpic.png", alt:""}
                   %span.user__inline-name Alex-dp
-              %input.user__select-input{type:'text'}
+                %input.user__select-input{type:'text'}
               .autosuggest
                 .autosuggest__user.active
                   .autosuggest__user-pic
@@ -110,7 +111,22 @@
                   %span.autosuggest__user-name zo-zo
           .create-project__team-label
             Comma separated list of @Users or e-mail addresses
-    
+  
+  
+    .create-project__container
+      .create-project__title
+        %button.create-project__ssh-arrow.icon_button
+      .create-project__info
+        .create-project__ssh-title Add a SSH key
+        .create-project__ssh-desc
+          SSH keys are a way to identify trusted computers, without involving password. The steps below will
+          %br
+          walk you through generating an SSH key and adding the public key to your GitHub  account
+          %a.create-project__ssh-more{href:'#'}
+            Read more on GitHub
+        %textarea.create-project__ssh-textarea{name:'createSSH'}
+        %button.create-project__ssh-add.orange add
+        
     .create-project__buttons
       %button.create-project__buttons-submit.orange_filled Create project
       %button.create-project__buttons-cancel.transparent Cancel
