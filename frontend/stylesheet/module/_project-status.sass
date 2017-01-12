@@ -1,0 +1,50 @@
+.project-status
+  display: flex
+  justify-content: space-between
+  &__wrapper
+    width: 49.5%
+  &__radio
+    display: none
+    &-label
+      border: 1px solid $black_transparent_rgba_02
+      padding: 2px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      border-radius: 4px
+      height: 150px
+      position: relative
+      cursor: pointer
+      &::before
+        content: ''
+        position: absolute
+        width: 24px
+        height: 24px
+        top: 8px
+        left: 8px
+        background: url("#{$imgurl}/Nots_24_Circle_v.svg") no-repeat center
+        display: none
+    &:checked
+      & + .project-status__radio-label
+        border: 3px solid $blue
+        padding: 0
+        &::before
+          display: block
+
+    &-name
+      text-transform: uppercase
+      color: $black
+      font-size: 12px
+      margin-bottom: 16px
+    &-pro
+      text-transform: uppercase
+      color: $white
+      font-size: 10px
+      border-radius: 24px
+      background-color: $orange
+      padding: 2px 4px
+      position: relative
+      top: -2px
+    &-desc
+      color: $black_transparent_rgba

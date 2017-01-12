@@ -1,10 +1,58 @@
 .users-list
+  margin-left: auto
+  margin-top: 4px
+  position: relative
+  min-width: 192px
   display: flex
   justify-content: flex-end
-  align-items: center
-  margin-left: auto
+
+  &__button
+    width: 24px
+    height: 24px
+    border: 1px solid $black_transparent_rgba
+    border-radius: 50%
+    margin-right: auto
+    font-size: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__container-wrapper
+    background-color: $white
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    display: flex
+    transition: background-color .3s
+    &::before
+      content: ''
+      display: block
+      width: 100px
+      transform: translate(-100%)
+      position: absolute
+      margin: auto
+      left: 0
+      top: 0
+      bottom: 0
+      background: linear-gradient(to right, transparent, $light_blue)
+      transition: background .3s
+  &__container
+    display: flex
+    justify-content: flex-end
+
+  &.hide
+    .users-list
+      &__container-wrapper
+        &::before
+          display: none
+      &__wrapper
+        max-width: 128px
+        overflow: hidden
+
   &__wrapper
     display: flex
+    justify-content: flex-end
   &__item
     margin-right: 8px
   &:last-child

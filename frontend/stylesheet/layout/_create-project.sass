@@ -1,0 +1,224 @@
+.create-project
+  background-color: $white
+  margin-bottom: 56px
+  &__selected-color
+    position: absolute
+    top: 0
+    margin: auto
+    height: 6px
+    left: 0
+    right: 0
+    @include colors-with-bg()
+  &__container
+    display: flex
+    border-bottom: 1px solid $black_transparent_rgba_01
+    padding-right: 48px
+    &:last-child
+      border-bottom: none
+  &__title
+    width: 195px
+    padding-top: 48px
+    padding-left: 48px
+    flex-shrink: 0
+    position: relative
+  &__info
+    flex-grow: 1
+  &__photo
+    width: 96px
+    height: 96px
+    border-radius: 50%
+    background-color: $light_gray
+    border: 1px dashed $black
+
+  &__head
+    padding-top: 80px
+
+  &__project
+    &-title
+      margin-bottom: 48px
+    &-label
+      color: $black_transparent_rgba
+    &-desc
+      margin-bottom: 40px
+    &-status
+      margin-bottom: 40px
+
+  &__input
+    border: none
+    color: $black
+    margin-bottom: 8px
+    flex-grow: 1
+    &:focus
+      outline: none
+    @include placeholder
+      color: $black
+    &-wrapper
+      border-bottom: 1px solid $black_transparent_rgba_01
+      margin-bottom: 8px
+      display: flex
+      flex-flow: row wrap
+    &--title
+      font-size: 26px
+    &--desc
+      font-size: 16px
+
+  &__colors
+    margin-bottom: 40px
+    &-container
+      display: flex
+      justify-content: space-between
+    &-title
+      color: $black
+      font-size: 16px
+      margin-bottom: 16px
+
+  &__color
+    width: 64px
+    height: 64px
+    border-radius: 4px
+    cursor: pointer
+    &-radio
+      display: none
+      &:checked
+        & + .create-project__color
+          position: relative
+          &::before
+            position: absolute
+            content: ''
+            width: 24px
+            height: 24px
+            background: url("#{$imgurl}/Nots_24_White_v_big.svg") no-repeat center
+            margin: auto
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+          &--white
+            &::before
+              background: url("#{$imgurl}/Nots_24_Black_v_big.svg") no-repeat center
+    &--white
+      border: 1px solid $black_transparent_rgba_02
+    @include colors-with-bg()
+  //files
+  &__files
+    @include create-project_block-name(-name)
+    &-content
+      padding: 48px 0
+      display: flex
+      align-items: center
+    &-delim
+      margin: auto 16px
+      color: $black_transparent_rgba
+    &-button
+      border: 1px solid $black_transparent_rgba_04
+      text-transform: uppercase
+      cursor: pointer
+      background-color: transparent !important
+      border-radius: 24px
+      height: 40px
+      padding: 0 24px
+      display: flex
+      align-items: center
+      font-weight: bold
+      letter-spacing: 1px
+      position: relative
+      z-index: 1
+      overflow: hidden
+      &:hover
+        &::after
+          animation: button_animation_long .3s
+          content: ''
+          position: absolute
+          z-index: -1
+          width: 400px
+          height: 400px
+          border-radius: 50%
+          margin: auto
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          background-color: $light_gray
+      &--git
+        padding-left: 8px
+        &::before
+          content: ''
+          display: inline-block
+          background: url("#{$imgurl}/Nots_28_Github.svg") no-repeat center
+          width: 28px
+          height: 28px
+          margin-right: 16px
+
+
+  //team
+  &__team
+    @include create-project_block-name(-name)
+    &-container
+      padding: 40px 0 56px
+    &-users
+      border-bottom: 1px solid $black_transparent_rgba_01
+      margin-bottom: 8px
+    &-label
+      color: $black_transparent_rgba
+
+  &__back-arrow
+      &.icon_button
+        &::before
+          background: url("#{$imgurl}/icon-arrow-left-black.svg") no-repeat center
+
+  //ssh
+  &__ssh
+    &-title
+      color: $black
+      font-size: 16px
+      margin: 56px 0 16px
+    &-desc
+      color: $black_transparent_rgba
+    
+    &-more
+      display: block
+      color: $blue
+      margin: 16px 0 32px
+    &-textarea
+      width: 100%
+      font-size: 16px
+      line-height: 2
+      resize: none
+      border: none
+      border-bottom: 1px solid $black_transparent_rgba_01
+      margin-bottom: 24px
+      &:focus
+        outline: none
+    &-add
+      margin-bottom: 48px
+
+  //ssh success
+  &__commands
+    &-container
+      margin: 24px 0 32px
+    &-item
+      color: $black
+      font-size: 16px
+      line-height: 2
+
+  &__buttons
+    display: flex
+    background-color: $light_gray
+    padding: 24px 0 24px 48px
+    & > &-submit.orange_filled
+      margin-right: 0
+
+
+.user__select
+  display: flex
+  width: 100%
+  span
+    width: 100%
+
+  &-input
+    border: none
+    font-size: 16px
+    height: 32px
+    color: $black
+    &:focus
+      outline: none

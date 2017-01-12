@@ -3,25 +3,20 @@
     
     
     // users list
-    .users-list
-      %ul.users-list__wrapper
-        %li.users-list__item
-          %a.users-list__link{href:'#'}
-            .avatar_wrapper
-              %img.users-list__img{src:'images/userpic.png', alt:''}
-        %li.users-list__item
-          %a.users-list__link{href:'#'}
-            .avatar_wrapper
-              %img.users-list__img{src:'images/userpic.png', alt:''}
-        %li.users-list__item
-          %a.users-list__link{href:'#'}
-            .avatar_wrapper
-              %img.users-list__img{src:'images/userpic.png', alt:''}
-        %li.users-list__item
-          %a.users-list__link{href:'#'}
-            .avatar_wrapper
-              %img.users-list__img{src:'images/userpic.png', alt:''}
-      .users-list__counter 79
+    .users-list.users-list.hide
+      .users-list__button 99
+      .users-list__container-wrapper
+        .users-list__container
+          %ul.users-list__wrapper
+            %li.users-list__item
+              .users-list__link
+                .avatar_wrapper
+                  %img.users-list__img{src:'images/userpic.png', alt:''}
+            %li.users-list__item
+              .users-list__link
+                .avatar_wrapper
+                  %img.users-list__img{src:'images/userpic.png', alt:''}
+          .users-list__counter 1
         
         
   .site-components__container

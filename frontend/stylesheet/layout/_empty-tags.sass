@@ -1,8 +1,7 @@
 .empty-tags
   &__content
-    padding: 56px 0
+    padding: 72px 0
     background-color: $white_transparent_rgba_01
-    user-select: none
   &__tags
     display: flex
     justify-content: center
@@ -11,29 +10,23 @@
     width: 50%
     margin: 0 auto 32px
     cursor: default
+    user-select: none
   &__tag
     margin: 5px
   &__text
-    margin-bottom: 24px
+    margin-bottom: 48px
   @include empty-text()
 
   &__button
     text-align: center
+    &.hover
+      > div
+        color: $blue
     &-desc
       text-transform: uppercase
       color: $white
+      font-size: 12px
+      font-weight: 500
 
-  &__plus
-    width: 40px
-    height: 40px
-    border: 1px solid $white_transparent_rgba
-    border-radius: 50%
-    margin-bottom: 16px
-    cursor: pointer
-    //plus
-    background-color: transparent
-    color: $white
-    font-size: 32px
-    line-height: 1
-    &:focus
-      outline: none
+    button
+      margin-bottom: 16px

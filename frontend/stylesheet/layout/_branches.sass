@@ -10,10 +10,16 @@
     border-bottom: 1px solid $black_transparent_rgba_01
     align-items: center
     position: relative
+    .users-list__container-wrapper
+      background: $light_grey
     &:hover
       background: $white
       border-bottom: 1px solid $white
       border-radius: 4px
+      .users-list
+        display: none
+      .branches__add-note
+        display: block
       &:after
         content: ""
         position: absolute
@@ -23,8 +29,6 @@
         border-top: 1px solid $light_grey
         width: 100%
         height: 1px
-      & .branches__add-note
-        display: block
     &:last-child
       border-bottom: 0
   &__date

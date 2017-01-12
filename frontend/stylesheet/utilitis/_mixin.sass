@@ -28,8 +28,17 @@
       color: $bg_9
       border-color: $bg_9
 
+@mixin colors-with-border-05($parent-class: colors-border)
+  &.#{$parent-class}
+    @for $i from 1 through length($bgs)
+      &--#{$i}
+        color: nth($bgs, $i)
+        border-color: rgba(nth($bgs, $i), 0.5)
+
 @mixin colors-with-bg($parent-class: colors-bg)
   &.#{$parent-class}
+    &--0
+      background-color: $white
     &--1
       background-color: $bg_1
     &--2
@@ -69,3 +78,19 @@
   width: 64px
   height: 64px
   margin: 0 auto 24px
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+@mixin create-project_block-name($blockName, $fontSize: 12px)
+  &#{$blockName}
+    text-transform: uppercase
+    color: $black_transparent_rgba_07
+    font-size: $fontSize
