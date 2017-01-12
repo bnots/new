@@ -69,3 +69,19 @@
   width: 64px
   height: 64px
   margin: 0 auto 24px
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+@mixin create-project_block-name($blockName, $fontSize: 12px)
+  &#{$blockName}
+    text-transform: uppercase
+    color: $black_transparent_rgba_07
+    font-size: $fontSize
