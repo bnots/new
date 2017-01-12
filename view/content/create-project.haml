@@ -73,6 +73,34 @@
           %button.create-project__files-button.create-project__files-button--local Add local project
           %span.create-project__files-delim or
           %button.create-project__files-button.create-project__files-button--git Import from GitHub
+  
+  
+    .create-project__container
+      .create-project__title
+        %button.create-project__back-arrow.icon_button
+      .create-project__info
+        .create-project__ssh-title Add a SSH key
+        .create-project__ssh-desc
+          SSH keys are a way to identify trusted computers, without involving password. The steps below will
+          %br
+          walk you through generating an SSH key and adding the public key to your GitHub  account
+          %a.create-project__ssh-more{href:'#'}
+            Read more on GitHub
+        %textarea.create-project__ssh-textarea{name:'createSSH'}
+        %button.create-project__ssh-add.orange add
+  
+  
+    .create-project__container
+      .create-project__title
+        %button.create-project__back-arrow.icon_button
+      .create-project__info
+        .create-project__ssh-title SSH key successfuly added
+        .create-project__ssh-desc
+          Now you can add file via terminal using following commands:
+        .create-project__commands-container
+          .create-project__commands-item Commands list
+          .create-project__commands-item Commands list
+          .create-project__commands-item Commands list
     
     
     .create-project__container
@@ -111,22 +139,8 @@
                   %span.autosuggest__user-name zo-zo
           .create-project__team-label
             Comma separated list of @Users or e-mail addresses
-  
-  
-    .create-project__container
-      .create-project__title
-        %button.create-project__ssh-arrow.icon_button
-      .create-project__info
-        .create-project__ssh-title Add a SSH key
-        .create-project__ssh-desc
-          SSH keys are a way to identify trusted computers, without involving password. The steps below will
-          %br
-          walk you through generating an SSH key and adding the public key to your GitHub  account
-          %a.create-project__ssh-more{href:'#'}
-            Read more on GitHub
-        %textarea.create-project__ssh-textarea{name:'createSSH'}
-        %button.create-project__ssh-add.orange add
-        
+    
+    
     .create-project__buttons
       %button.create-project__buttons-submit.orange_filled Create project
       %button.create-project__buttons-cancel.transparent Cancel
