@@ -121,6 +121,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'empty-tags') ),
     new HtmlWebpackPlugin( addHTML( 'empty-timeline') ),
     new HtmlWebpackPlugin( addHTML( 'empty-history') ),
+    new HtmlWebpackPlugin( addHTML( 'branches') ),
 ];
 
 if( NODE_ENV == 'production' ) {

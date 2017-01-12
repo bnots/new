@@ -1,0 +1,55 @@
+.branches
+  &__container
+    background: $light_grey
+    padding: 24px 32px
+    margin-bottom: 40px
+  &__item
+    display: flex
+    min-height: 72px
+    padding: 0 16px
+    border-bottom: 1px solid $black_transparent_rgba_01
+    align-items: center
+    position: relative
+    &:hover
+      background: $white
+      border-bottom: 1px solid $white
+      border-radius: 4px
+      &:after
+        content: ""
+        position: absolute
+        top: -1px
+        left: 0
+        right: 0
+        border-top: 1px solid $light_grey
+        width: 100%
+        height: 1px
+      & .branches__add-note
+        display: block
+    &:last-child
+      border-bottom: 0
+  &__date
+    display: flex
+    flex-direction: column
+    font-size: 12px
+    color: $black_transparent_rgba_05
+    min-width: 100px
+    &:first-child
+      padding-bottom: 8px
+  &__main
+    align-self: flex-start
+  &__name
+    padding: 16px 0
+  &__add-note
+    font-size: 12px
+    text-transform: uppercase
+    margin-left: auto
+    flex-shrink: 0
+    display: none
+    &:after
+      content: url("../images/Nots_28_Note_blue_plus.svg")
+      width: 28px
+      height: 28x
+      overflow: hidden
+      display: inline-block
+      vertical-align: middle
+      margin-left: 16px
