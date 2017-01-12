@@ -27,6 +27,7 @@ main, .dialog
     font-size: 14px
     letter-spacing: 0.05em
     margin-right: 24px
+    height: 100%
 
     &::after
       content: ""
@@ -89,7 +90,7 @@ main, .dialog
     color: $white
 
 
-  button.icon_button
+  button.icon_button, button.icon_button.white
     outline: 0
     position: relative
     width: 40px
@@ -140,6 +141,14 @@ main, .dialog
       background: transparent
       z-index: 1
 
+  button.icon_button.white
+    border-color: $white
+    &:hover::after
+      background-color: $blue
+
+    &::before
+      background: url("../images/Nots_24_White_plus.svg") 50% 50% no-repeat
+      background-size: 24px 24px
 
     
   button.transparent

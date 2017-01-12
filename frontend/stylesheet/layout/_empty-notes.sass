@@ -15,6 +15,7 @@
     justify-content: space-around
     max-width: 500px
     margin: 0 auto 48px
+    user-select: none
   &__box
     text-align: center
     flex-basis: 100px
@@ -25,28 +26,31 @@
   &__item
     width: 32px
     height: 32px
-    background-image: url("../images/0Nots_24_Document.svg")
-    border-radius: 4px
+    //background-image: url("../images/0Nots_24_Document.svg")
+    //border-radius: 4px
     position: relative
     overflow: hidden
     margin: 0 auto 12px
-    &.code
-      .empty-notes__img
-        background: url("../images/Nots_24_Note_code.svg")
+    > svg .a
+      fill: $white
+      opacity: 1
+    &.code 
+      > svg .c
+        fill: $fr_1
     &.file
-      .empty-notes__img
-        background: url("../images/Nots_24_Note_file.svg")
+      > svg .c
+        fill: $fr_2
     &.commit
-      .empty-notes__img
-        background: url("../images/Nots_24_Note_commit.svg")
+      > svg .c
+        fill: $fr_3
     &.private
-      .empty-notes__img
-        background: url("../images/Nots_24_Note_code.svg")
+      > svg .c
+        fill: $fr_4
       &+.empty-notes__quantity
         background-color: #ffab00
     &.branch
-      .empty-notes__img
-        background: url("../images/Nots_24_Note_branch.svg")
+      > svg .c
+        fill: $fr_5
   &__img
     width: 28px
     height: 28px
@@ -68,6 +72,7 @@
     transform: translate(50%, -50%)
     span
       display: inline-block
-      padding: 2px 6px
+      padding: 3px 6px
       font-size: 12px
+      min-width: 20px
 
