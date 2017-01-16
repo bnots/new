@@ -1,0 +1,129 @@
+.dialogue-tag
+  background-color: $white
+  &__head
+    padding: 40px 48px
+    min-height: 390px
+
+  &__title.title-h2
+    margin-bottom: 24px
+    color: $black
+
+  &__tags
+    margin-bottom: 24px
+
+  &__tag
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 16px
+
+  &__name
+    margin-left: 16px
+
+  &__submit-container
+    padding: 24px 48px
+    background-color: $black_transparent_rgba_01
+    display: flex
+
+  &__plus
+    border-radius: 50%
+    border: 1px solid $black_transparent_rgba_02
+    background-color: transparent
+    display: block
+    width: 40px
+    height: 40px
+    position: relative
+    left: -8px
+    &.icon_button::before
+      content: '+'
+      background: none
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 32px
+      font-weight: 300
+    &-container
+      display: flex
+      align-items: center
+    &-text
+      text-transform: uppercase
+      color: $black
+      font-size: 12px
+      margin-left: 8px
+
+  &__set
+    display: flex
+    align-items: center
+    margin-left: 40px
+    &-input
+      border: 1px solid $black
+      border-radius: 4px
+      padding: 0 4px
+      height: 24px
+      margin-right: 16px
+      &:focus
+        outline: none
+      @include colors-with-border()
+    &-colors
+      overflow: hidden
+      border-radius: 4px
+      display: flex
+    &-color
+      width: 24px
+      height: 24px
+      @include colors-with-bg()
+    &-label
+      display: block
+      width: 100%
+      height: 100%
+      cursor: pointer
+      position: relative
+    &-radio
+      display: none
+      &:checked
+        & + .dialogue-tag__set-ok::before
+          content: ''
+          position: absolute
+          margin: auto
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          width: 16px
+          height: 16px
+          background: url("#{$imgurl}/Nots_24_White_v_big.svg") no-repeat center      
+    &-text
+      text-transform: uppercase
+      font-size: 12px
+      color: $black
+      margin-left: 16px
+
+  &__add-btn.orange_filled
+    margin-right: 0
+
+.tag-check
+  display: block
+
+  &__use
+    cursor: pointer
+    width: 24px
+    height: 24px
+    position: relative
+    border-radius: 4px
+    border: 1px solid $black_transparent_rgba_02
+
+  &__input
+    display: none
+    &:checked + .tag-check__use
+      border: none
+      &::before
+        content: ''
+        background: url("#{$imgurl}/Nots_24_Checkbox_v.svg") no-repeat center
+        position: absolute
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
