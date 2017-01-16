@@ -124,6 +124,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'branches') ),
     new HtmlWebpackPlugin( addHTML( 'create-project') ),
     new HtmlWebpackPlugin( addHTML( 'commits-step1') ),
+    new HtmlWebpackPlugin( addHTML( 'docs-list') ),
 ];
 
 if( NODE_ENV == 'production' ) {

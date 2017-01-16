@@ -4,8 +4,9 @@ var main = document.querySelector("main");
 
 main.innerHTML = template;
 
-var dropdown = document.querySelector(".branch-select__main");
+var dropdown = document.querySelector(".branch-select");
 var dropdownlist = document.querySelector(".branch-select__list");
+var dropdownmain = document.querySelector(".branch-select__main");
 dropdown.addEventListener( "click" , function() {
     this.classList.toggle( "opened" );
     dropdownlist.classList.toggle( "hidden" )
@@ -19,10 +20,10 @@ dropdownlist.addEventListener( "click" , function(event) {
         if (target.tagName === 'LI') {
             console.log(target);
             var newli = document.createElement('li');
-            newli.innerHTML = dropdown.innerHTML;
-            newli.className = 'projects-dropdown__item';
+            newli.innerHTML = dropdownmain.innerHTML;
+            newli.className = 'branch-select__item';
             dropdownlist.replaceChild(newli, target);
-            dropdown.innerHTML = target.innerHTML
+            dropdownmain.innerHTML = target.innerHTML
 
         }
         target = target.parentNode;

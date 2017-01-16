@@ -85,6 +85,7 @@
     top: 24px
     z-index: 5
     width: 100%
+    border-radius: 4px
     &__container
       position: relative
       width: 50%
@@ -115,14 +116,15 @@
         border-right: 5px solid transparent
         vertical-align: middle
         transition: transform 0.3s
-      &.opened
+    &.opened
+      border: 1px solid $black_transparent_rgba_01
+      .branch-select__main
         border-bottom: 0
         &:after
           transform: rotate(180deg)
     &__list
-      padding: 8px
+      padding: 0 8px 8px
       background: $white
-      border: 1px solid $black_transparent_rgba_02
       border-radius: 4px
     &__item
       line-height: 40px
