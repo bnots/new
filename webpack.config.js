@@ -123,6 +123,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'empty-history') ),
     new HtmlWebpackPlugin( addHTML( 'branches') ),
     new HtmlWebpackPlugin( addHTML( 'create-project') ),
+    new HtmlWebpackPlugin( addHTML( 'dialogue-add-tag') ),
+    new HtmlWebpackPlugin( addHTML( 'dialogues') ),
 ];
 
 if( NODE_ENV == 'production' ) {
