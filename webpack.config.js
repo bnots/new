@@ -124,6 +124,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'branches') ),
     new HtmlWebpackPlugin( addHTML( 'create-project') ),
     new HtmlWebpackPlugin( addHTML( 'commits-step1') ),
+    new HtmlWebpackPlugin( addHTML( 'dialogue-add-tag') ),
+    new HtmlWebpackPlugin( addHTML( 'dialogues') ),
     new HtmlWebpackPlugin( addHTML( 'docs-list') ),
     new HtmlWebpackPlugin( addHTML( 'branches-note') )
 ];

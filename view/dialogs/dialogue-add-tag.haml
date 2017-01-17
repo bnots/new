@@ -1,0 +1,73 @@
+%section.dialogue-tag
+  .dialogue-tag__head
+    %h2.dialogue-tag__title.title-h2 Add tags to note
+    .dialogue-tag__tags
+      .dialogue-tag__tag
+        %label.tag-check
+          %input.tag-check__input{type:'checkbox', name:'tag-name'}
+          .tag-check__use
+        .dialogue-tag__name
+          %a.tabs-name.colors-border--5{href:'#'} details needed
+      .dialogue-tag__tag
+        %label.tag-check
+          %input.tag-check__input{type:'checkbox', name:'tag-name'}
+          .tag-check__use
+        .dialogue-tag__name
+          %a.tabs-name.colors-border--3{href:'#'} wtf
+      .dialogue-tag__tag
+        %label.tag-check
+          %input.tag-check__input{type:'checkbox', name:'tag-name'}
+          .tag-check__use
+        .dialogue-tag__name
+          %a.tabs-name.colors-border--7{href:'#'} approved
+    
+    .dialogue-tag__plus-container
+      %button.dialogue-tag__plus.icon_button
+      %span.dialogue-tag__plus-text new tag
+  
+    .dialogue-tag__set
+      %input.dialogue-tag__set-input.colors-border--4{type:'text'}
+      .dialogue-tag__set-colors
+        .dialogue-tag__set-color.colors-bg--1
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--1', checked:'checked'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--2
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--2'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--3
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--3'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--4
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--4'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--5
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--5'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--6
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--6'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--7
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--7'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--8
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--8'}
+            .dialogue-tag__set-ok
+        .dialogue-tag__set-color.colors-bg--9
+          %label.dialogue-tag__set-label
+            %input.dialogue-tag__set-radio{type:'radio', name:'dialogue', value:'colors-bg--9'}
+            .dialogue-tag__set-ok
+      .dialogue-tag__set-text create tag
+      
+      
+  
+  .dialogue-tag__submit-container
+    %button.dialogue-tag__add-btn.orange_filled Add tags
+    %button.dialogue-tag__cancel-btn.transparent Cancel

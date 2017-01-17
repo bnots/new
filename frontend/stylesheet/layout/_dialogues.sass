@@ -1,0 +1,85 @@
+// delete
+.view-margin-bottom
+  margin-bottom: 24px
+// delete
+
+
+.dialogues
+  &__container
+    display: flex
+    flex-direction: column
+    background-color: $white
+    justify-content: space-between
+    &--center
+      justify-content: center
+      align-items: center
+      padding: 32px 0 48px
+
+  &__info
+    padding: 40px 48px
+
+  &__title
+    &.title-h2
+      color: $black
+    @at-root .dialogues__container
+      &--center
+        .dialogues__title
+          margin-bottom: 16px
+
+    &--img
+      &::before
+        content: ''
+        display: block
+        background: url('#{$imgurl}/Nots_28-note-code.svg') no-repeat center
+        width: 28px
+        height: 28px
+        margin: 0 auto 16px
+  &__user
+    &-select
+      border-bottom: 1px solid $black_transparent_rgba_01
+    &-desc
+      color: $black_transparent_rgba
+      line-height: 2.5
+
+  &__head
+    &--tag
+      margin: 24px 0 32px
+    &--account
+      padding: 40px 48px 0
+      .dialogues__title.title-h2
+        margin-bottom: 16px
+
+  &__text-desc
+    text-align: center
+    line-height: 1.5
+    font-size: 16px
+    margin-bottom: 40px
+    color: $black_transparent_rgba_08
+    &--left
+      text-align: left
+
+  &__account-password
+    display: block
+    border: none
+    font-size: 16px
+    border-bottom: 1px solid $black_transparent_rgba_01
+    outline: none
+    width: 100%
+    margin-top: 32px
+    padding-bottom: 16px
+    @include placeholder
+      font-size: 14px
+      color: $black_transparent_rgba
+
+  // button
+  &__btn
+    &-container
+      background-color: $black_transparent_rgba_01
+      padding: 24px 48px
+      display: flex
+      &--white
+        background-color: transparent
+        padding: 0
+        justify-content: center
+    &.orange_filled, &.transparent
+      margin-right: 0
