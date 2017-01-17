@@ -126,6 +126,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'commits-step1') ),
     new HtmlWebpackPlugin( addHTML( 'dialogue-add-tag') ),
     new HtmlWebpackPlugin( addHTML( 'dialogues') ),
+    new HtmlWebpackPlugin( addHTML( 'start-page') ),
 ];
 
 if( NODE_ENV == 'production' ) {
