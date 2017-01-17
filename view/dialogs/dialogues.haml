@@ -1,5 +1,5 @@
 %section.dialogues
-  .dialogues__container
+  .dialogues__container.view-margin-bottom
     .dialogues__info
       %h2.dialogues__title.title-h2 Add people to project
       .dialogues__pick-people
@@ -33,15 +33,43 @@
                   %img{src:"images/userpic.png", alt:""}
                 %span.autosuggest__user-name zo-zo
         .dialogues__user-desc Comma separated list of @User or e-mail address
+    .dialogues__btn-container
+      %button.dialogues__btn.dialogues__btn--add-people.orange_filled Add people
+      %button.dialogues__btn.dialogues__btn--cancel.transparent Cancel
   
-    .dialogues__btn
-      %button.dialogues__add-people.orange_filled Add people
-      %button.dialogues__cancel-people.transparent Cancel
-  
-  .dialogues__container.dialogues__container--center
-    .dialogues__delete
+  .dialogues__container.dialogues__container--center.view-margin-bottom
+    .dialogues__head
       %h2.dialogues__title.dialogues__title--img.title-h2 This is piece of shid not a code
-      
-    .dialogues__delete-btn
-      %button.dialogues__delete.orange_filled Delete
-      %button.dialogues__delete-cancel.transparent Cancel
+    .dialogues__text-desc
+      Do you want to delete note with all comments?
+      %br
+      It cannot be undone.
+    .dialogues__btn-container.dialogues__btn-container--white
+      %button.dialogues__btn.dialogues__btn--delete.orange_filled Delete
+      %button.dialogues__btn.dialogues__btn--cancel.transparent Cancel
+  
+  
+  .dialogues__container.dialogues__container--center.view-margin-bottom
+    .dialogues__head.dialogues__head--tag
+      %a.tabs-name.tabs-name--head.colors-border--5{href:'#'} details needed
+    .dialogues__text-desc
+      Do you want to delete note with all comments?
+      %br
+      It cannot be undone.
+    .dialogues__btn-container.dialogues__btn-container--white
+      %button.dialogues__btn.dialogues__btn--delete.orange_filled Delete
+      %button.dialogues__btn.dialogues__btn--cancel.transparent Cancel
+  
+  .dialogues__container.view-margin-bottom
+    .dialogues__head.dialogues__head--account
+      %h2.dialogues__title.title-h2 Delete account
+      .dialogues__text-desc.dialogues__text-desc--left
+        All your projects and notes will be deleted.
+        %br
+        This action cannot be undone.
+        %br
+        Confirm your password to proceed account removing.
+        %input.dialogues__account-password{type:'password', placeholder:'Password'}
+    .dialogues__btn-container
+      %button.dialogues__btn.dialogues__btn--delete.orange_filled.disabled Delete
+      %button.dialogues__btn.dialogues__btn--cancel.transparent Cancel
