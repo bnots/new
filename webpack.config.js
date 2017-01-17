@@ -127,6 +127,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'dialogue-add-tag') ),
     new HtmlWebpackPlugin( addHTML( 'dialogues') ),
     new HtmlWebpackPlugin( addHTML( 'start-page') ),
+    new HtmlWebpackPlugin( addHTML( 'add-images') ),
+    new HtmlWebpackPlugin( addHTML( 'add-files') ),
 ];
 
 if( NODE_ENV == 'production' ) {
