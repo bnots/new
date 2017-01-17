@@ -1,0 +1,123 @@
+.branches-note
+  &__menu
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    .btn-arrow
+      margin-right: 32px
+    .orange
+      margin-left: auto
+      margin-right: 0
+  .title-h1
+    margin-bottom: 8px
+    font-size: 28px
+    font-weight: 500
+  &__title-date
+    font-size: 12px
+    color: $white_transparent_rgba
+  &__wrapper
+    position: relative
+  &__header
+    background-color: $light_gray
+    display: flex
+    align-items: center
+    padding: 16px 48px 16px 16px
+  &__icon
+    width: 24px
+    height: 24px
+    background: url("../images/Nots_24_Note_branch.svg") no-repeat center
+    margin-right: 8px
+    flex-shrink: 0
+  &__user
+    display: flex
+    flex-direction: row
+    margin-right: 8px
+    flex-shrink: 0
+  &__avatar
+    @include userpic(32px)
+    margin-right: 8px
+  &__info
+    margin-right: 16px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 32px
+    overflow: hidden
+    white-space: nowrap
+    &_name
+      text-transform: uppercase
+      font-size: 12px
+      line-height: 1.4
+      overflow: hidden
+    &_date
+      font-size: 12px
+      color: $black_transparent_rgba_05
+      overflow: hidden
+  .tabs-name
+    margin-right: 4px
+    display: inline-block
+    vertical-align: middle
+  &__tags
+  &__add-tag
+    width: 32px
+    height: 24px
+    background: url("../images/Nots_25_Plus.svg") no-repeat center
+    border: 1px solid $black_transparent_rgba_01
+    border-radius: 4px
+    display: inline-block;
+    vertical-align: middle;
+  &__link
+    width: 40px
+    height: 40px
+    background: url("../images/Nots_40_Link.svg") no-repeat center
+    margin-left: auto
+    border-radius: 4px
+    cursor: pointer
+    flex-shrink: 0
+    &:hover
+      background-color: $white
+
+  &__main
+    background: $white
+    padding: 40px 48px 48px
+  &__main-title
+    color: $black
+    font-size: 26px
+    margin-bottom: 8px
+  &__note-title
+    vertical-align: middle
+  &__fresh-rate
+    font-size: 12px
+    line-height: 1.6
+    font-weight: 500
+    display: inline-block
+    padding: 0 6px
+    border-radius: 10x
+    vertical-align: middle
+  &__text
+    line-height: 1.7
+    margin-bottom: 24px
+
+.btn-long
+  &:hover
+    &::after
+      width: 410px !important
+      height: 410px !important
+      animation: button_animation_long .3s ease-out
+
+.bookmarked
+  &:after
+    content: ""
+    width: 32px
+    height: 32px
+    position: absolute
+    top: 0
+    right: 0
+    background: $black url("../images/Nots_32_Bookmark_yellow.svg")
+    border-radius: 0 0 0 8px
+
+
+
+
+
+

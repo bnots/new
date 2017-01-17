@@ -125,6 +125,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'create-project') ),
     new HtmlWebpackPlugin( addHTML( 'commits-step1') ),
     new HtmlWebpackPlugin( addHTML( 'docs-list') ),
+    new HtmlWebpackPlugin( addHTML( 'branches-note') )
 ];
 
 if( NODE_ENV == 'production' ) {
