@@ -173,11 +173,25 @@ main, .dialog
       background: url("../images/Nots_24_White_plus.svg") 50% 50% no-repeat
       background-size: 24px 24px
 
+
   button.icon_button.grey
     &:hover::after
       background-color: $white_transparent_rgba_03
 
-    
+
+  button.btn-arrow
+    border: 1px solid $white_transparent_rgba
+    &:before
+      background: url("../images/Nots_25_Arrow_left_white.svg") 50% 50% no-repeat
+      background-size: 30px 30px
+
+  .icon_button.grey.active
+    border: 0
+    background-color: $white_transparent_rgba_03
+    &:hover:after
+      animation: none
+      background-color: transparent
+
   button.transparent
     opacity: 0.75
     font-size: 12px
@@ -185,12 +199,3 @@ main, .dialog
     border: none
     &:hover
       opacity: 1
-
-.btn-arrow
-  width: 42px
-  height: 42px
-  border: none
-  cursor: pointer
-  outline: 0
-  background: url(/images/icon-arrow-left.svg) no-repeat center
-  user-select: none

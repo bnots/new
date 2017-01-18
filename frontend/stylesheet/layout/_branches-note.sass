@@ -112,8 +112,16 @@
     position: absolute
     top: 0
     right: 0
-    background: $black url("../images/Nots_32_Bookmark_yellow.svg")
-    border-radius: 0 0 0 8px
+    background: url("../images/Nots_32_Bookmark_yellow.svg")
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    border-top: 16px solid $black
+    border-right: 16px solid $black
+    border-left: 16px solid transparent
+    border-bottom: 16px solid transparent
 
 
 

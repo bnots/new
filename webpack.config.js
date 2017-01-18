@@ -127,6 +127,7 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'dialogue-add-tag') ),
     new HtmlWebpackPlugin( addHTML( 'dialogues') ),
     new HtmlWebpackPlugin( addHTML( 'docs-list') ),
+    new HtmlWebpackPlugin( addHTML( 'docs-tile') ),
     new HtmlWebpackPlugin( addHTML( 'branches-note') )
 ];
 

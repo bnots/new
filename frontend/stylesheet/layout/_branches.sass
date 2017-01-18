@@ -7,19 +7,23 @@
     display: flex
     min-height: 72px
     padding: 0 16px
-    border-bottom: 1px solid $black_transparent_rgba_01
     align-items: center
     position: relative
     .users-list__container-wrapper
       background: $light_grey
+    &:before
+      content: ""
+      position: absolute
+      left: 115px
+      bottom: 0
+      width: calc(100% - 144px)
+      height: 1px
+      border-bottom: 1px solid $black_transparent_rgba_01
     &:hover
       background: $white
-      border-bottom: 1px solid $white
       border-radius: 4px
-      .users-list
-        display: none
-      .branches__add-note
-        display: block
+      .users-list__container-wrapper
+        background: $white
       &:after
         content: ""
         position: absolute
@@ -29,8 +33,11 @@
         border-top: 1px solid $light_grey
         width: 100%
         height: 1px
+      &:before
+        border: 0
     &:last-child
-      border-bottom: 0
+      &:before
+        border: 0
   &__date
     display: flex
     flex-direction: column
@@ -43,19 +50,19 @@
     align-self: flex-start
   &__name
     padding: 16px 0
-  &__add-note
-    font-size: 12px
-    text-transform: uppercase
-    margin-left: auto
-    flex-shrink: 0
-    min-width: 192px
-    text-align: right
-    display: none
-    &:after
-      content: url("../images/Nots_28_Note_blue_plus.svg")
-      width: 28px
-      height: 28x
-      overflow: hidden
-      display: inline-block
-      vertical-align: middle
-      margin-left: 16px
+  //&__add-note
+  //  font-size: 12px
+  //  text-transform: uppercase
+  //  margin-left: auto
+  //  flex-shrink: 0
+  //  min-width: 192px
+  //  text-align: right
+  //  display: none
+  //  &:after
+  //    content: url("../images/Nots_28_Note_blue_plus.svg")
+  //    width: 28px
+  //    height: 28x
+  //    overflow: hidden
+  //    display: inline-block
+  //    vertical-align: middle
+  //    margin-left: 16px
