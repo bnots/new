@@ -128,7 +128,10 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'dialogues') ),
     new HtmlWebpackPlugin( addHTML( 'docs-list') ),
     new HtmlWebpackPlugin( addHTML( 'docs-tile') ),
-    new HtmlWebpackPlugin( addHTML( 'branches-note') )
+    new HtmlWebpackPlugin( addHTML( 'branches-note') ),
+    new HtmlWebpackPlugin( addHTML( 'start-page') ),
+    new HtmlWebpackPlugin( addHTML( 'add-images') ),
+    new HtmlWebpackPlugin( addHTML( 'add-files') ),
 ];
 
 if( NODE_ENV == 'production' ) {
