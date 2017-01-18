@@ -51,8 +51,15 @@
     height: 72px
     padding: 0 16px
     position: relative
-    border-bottom: 1px solid $black_transparent_rgba_01
     align-items: center
+    &:after
+      content: ""
+      position: absolute
+      left: 16px
+      bottom: 0
+      width: calc(100% - 32px)
+      height: 1px
+      border-bottom: 1px solid $black_transparent_rgba_01
     &:hover
       background: $white
       border-bottom: 1px solid $white
@@ -64,6 +71,7 @@
         left: 0
         right: 0
         border-top: 1px solid $light_grey
+        border-bottom: 0
         width: 100%
         height: 1px
       .message__delete
@@ -85,7 +93,8 @@
       height: 97px
       top: -24px
     &:last-child
-      border-bottom: 0
+      &:after
+        border-bottom: 0
     &__avatar
       @include userpic(32px)
       margin-right: 16px
