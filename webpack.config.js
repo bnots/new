@@ -132,6 +132,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'start-page') ),
     new HtmlWebpackPlugin( addHTML( 'add-images') ),
     new HtmlWebpackPlugin( addHTML( 'add-files') ),
+    new HtmlWebpackPlugin( addHTML( 'list-template') ),
+    new HtmlWebpackPlugin( addHTML( 'card-template') ),
 ];
 
 if( NODE_ENV == 'production' ) {
