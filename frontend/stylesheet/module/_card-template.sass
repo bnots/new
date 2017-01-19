@@ -1,0 +1,263 @@
+// parent block
+$card: card
+$card-padding-top: 16px
+$card-padding-left: 48px
+// ------------
+@mixin hide()
+  &.hide
+    display: none
+
+@mixin files-pic($wrap-container, $offset: -8px, $size: 24px)
+  &--file, &--branch, &--commit, &--code
+    @if ($wrap-container)
+      .#{$wrap-container}
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          width: $size
+          height: $size
+          top: 50%
+          left: $offset
+          transform: translate(-100%, -50%)
+    @else
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: $size
+        height: $size
+        top: 50%
+        left: $offset
+        transform: translate(-100%, -50%)
+  &--file
+    @if ($wrap-container)
+      .#{$wrap-container}
+        &::before
+          background: url("#{$imgurl}/Nots_24_Note_file.svg") no-repeat center
+    @else
+      &::before
+        background: url("#{$imgurl}/Nots_24_Note_file.svg") no-repeat center
+  &--branch
+    @if ($wrap-container)
+      .#{$wrap-container}
+        &::before
+          background: url("#{$imgurl}/Nots_24_Note_branch.svg") no-repeat center
+    @else
+      &::before
+        background: url("#{$imgurl}/Nots_24_Note_branch.svg") no-repeat center
+  &--commit
+    @if ($wrap-container)
+      .#{$wrap-container}
+        &::before
+          background: url("#{$imgurl}/Nots_24_Note_commit.svg") no-repeat center
+    @else
+      &::before
+        background: url("#{$imgurl}/Nots_24_Note_commit.svg") no-repeat center
+  &--code
+    @if ($wrap-container)
+      .#{$wrap-container}
+        &::before
+          background: url("#{$imgurl}/Nots_24_Note_code.svg") no-repeat center
+    @else
+      &::before
+        background: url("#{$imgurl}/Nots_24_Note_code.svg") no-repeat center
+
+.card
+  display: block
+
+// extend classes
+%add-tag-button
+  margin-left: auto
+  color: $black
+  border: 1px solid $black_transparent_rgba_02
+  border-radius: 4px
+  padding: 4px
+  background-color: transparent
+  outline: 0
+  transition: all .3s
+  cursor: pointer
+  text-transform: uppercase
+  font-size: 12px
+  &:hover
+    background-color: $black_transparent_rgba_02
+    border-color: transparent
+    color: $white
+
+// main classes
+.#{$card}
+  //card status
+  &--private .#{$card}__status-item--private
+    display: block
+  &--mentioned .#{$card}__status-item--mentioned
+    display: block
+  &--unread .#{$card}__status-item--unread
+    display: block
+  //card action
+  &--delete .#{$card}__action--delete
+    display: block
+  &--edit .#{$card}__action--edit
+    display: block
+  &--link .#{$card}__action--link
+    display: block
+  //card pic ext
+  @include files-pic(#{$card}__head-wrapper)
+
+  // --
+  &__head
+    display: flex
+    padding: $card-padding-top $card-padding-left
+    background-color: $white
+    position: relative
+    // wrapper
+    &-wrapper
+      display: flex
+      align-items: center
+      width: 100%
+
+  &__status
+    text-transform: uppercase
+    font-size: 12px
+    margin-right: 16px
+    display: flex
+    &-item
+      display: none
+      user-select: none
+      &:not(:first-child)
+        margin-right: 8px
+      &--private
+        color: $orange
+        order: 1
+      &--mentioned
+        color: $bg_1
+        order: 2
+      &--unread
+        color: $blue
+        order: 3
+
+  &__marker
+    position: absolute
+    margin: auto
+    top: -$card-padding-top
+    left: -$card-padding-left
+    bottom: -$card-padding-top
+    width: 6px
+    background-color: currentColor
+    transform: translate(-100%)
+
+  // tags
+  &__tag
+    &:not(:last-child)
+      margin-right: 8px
+  &__tags
+    display: flex
+    justify-content: flex-start
+    margin-left: 24px
+    &-empty
+      @extend %add-tag-button
+      display: none
+    &-plus
+      @extend %add-tag-button
+      margin-left: 8px
+      background: url("#{$imgurl}/Nots_24_Black_plus.svg") no-repeat center
+      background-size: 16px
+      width: 24px
+      height: 24px
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        background: $black_transparent_rgba_02 url("#{$imgurl}/Nots_24_White_plus.svg") no-repeat center
+        background-size: 16px
+    &-container
+      display: flex
+      &:empty
+        ~ .#{$card}__tags-empty
+          display: block
+        ~ .#{$card}__tags-plus
+          display: none
+
+  // action button
+  &__action
+    width: 40px
+    height: 40px
+    display: none
+    cursor: pointer
+    border-radius: 4px
+    transition: background-color .3s
+    &:not(:last-child)
+      margin-right: 8px
+    &:hover
+      background-color: $light_gray
+
+    &-wrapper
+      display: flex
+      margin-left: auto
+    &--delete
+      background: url("#{$imgurl}/Nots_40_Delete.svg") no-repeat center
+    &--edit
+      background: url("#{$imgurl}/Nots_40_Edit.svg") no-repeat center
+    &--link
+      background: url("#{$imgurl}/Nots_40_Link.svg") no-repeat center
+
+  // context
+  &__context
+    background-color: $white
+    padding: 40px 48px
+    position: relative
+
+  &__title
+    font-size: 28px
+    font-weight: 500
+    margin-bottom: 32px
+    color: $black
+    display: flex
+    align-items: center
+
+  &__fresh
+    font-size: 12px
+    overflow: hidden
+    display: flex
+    border-radius: 24px
+    color: $black
+    padding: 2px 4px
+    cursor: pointer
+    user-select: none
+    margin-left: 8px
+    &:hover &-text
+      display: inline-block
+    &-text
+      color: $black_transparent_rgba_04
+      white-space: nowrap
+      margin-left: 8px
+      padding-right: 4px
+      display: none
+
+  &__open
+    &-wrapper
+      position: absolute
+      bottom: 48px
+      right: 48px
+      display: flex
+      align-items: center
+
+  &__open-text
+    text-transform: uppercase
+    font-size: 12px
+    color: $black
+    margin-right: 16px
+
+
+.user-info
+  @include userpic(32px)
+  display: flex
+  align-items: center
+  &__data
+    margin-left: 8px
+  &__name
+    color: $black
+    text-transform: uppercase
+    font-size: 12px
+  &__activity
+    color: $black_transparent_rgba
+    font-size: 12px

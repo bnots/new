@@ -1,0 +1,51 @@
+%section.card-template
+  .card.card--branch.card--mentioned.card--unread.card--private.card--delete.card--link
+    .card__head
+      .card__head-wrapper
+        .card__status
+          .card__status-item.card__status-item--unread
+            Unread
+            .card__marker
+          .card__status-item.card__status-item--mentioned
+            You mentioned
+            .card__marker
+          .card__status-item.card__status-item--private
+            Private
+            .card__marker
+          
+        %a.user-info{href:'#'}
+          .user-info__photo.avatar_wrapper
+            %img.user-info__img{src:'images/userpic.jpg', alt:'pic'}
+          .user-info__data
+            .user-info__name
+              Greben
+            .user-info__activity
+              Today at 18:52
+        .card__tags
+          .card__tags-container
+            %a.card__tag.tabs-name.tabs-name--card.colors-border--5.colors-bg--5{href:'#'}
+              wtf
+              %span.tabs-name__close
+          %button.card__tags-empty add tag
+          %button.card__tags-plus
+        .card__action-wrapper
+          .card__action.card__action--delete
+          .card__action.card__action--edit
+          .card__action.card__action--link
+    .card__context
+      -# edit context---------
+      .card__title
+        Commit pre-release beta 1.0
+        .card__fresh.fr_1 78%
+          .card__fresh-text Fresh rate
+      .card__paths
+        
+      
+      
+      -# end edit context-----
+      .card__to-context
+        %button.card__open.icon_button
+      .card__open-wrapper
+        .card__open-text Hide
+        %button.card__open.icon_button
+  

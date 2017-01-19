@@ -6,6 +6,8 @@
   text-transform: uppercase
   font-size: 13px
   font-weight: 500
+  //colors
+  @include colors-with-border-05()
   &--input
     &:focus
        outline: none
@@ -19,5 +21,34 @@
     letter-spacing: 1px
     padding: 8px 16px
 
-  //colors
-  @include colors-with-border-05()
+  &--card
+    padding: 2px 5px
+    position: relative
+    transition: all .3s
+    &:hover
+      @include colors-with-bg()
+      color: $white !important
+      .tabs-name__close
+        animation: tag-close-button .3s linear
+        display: block
+  &__close
+    position: absolute
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background: $black url("#{$imgurl}/Nots_20_delete-tag-01.svg") no-repeat center
+    top: 0
+    right: 0
+    transform: translate(60%, -50%)
+    display: none
+
+@keyframes tag-close-button
+  from, 50%
+    width: 0
+    height: 0
+  85%
+    width: 28px
+    height: 28px
+  to
+    width: 20px
+    height: 20px
