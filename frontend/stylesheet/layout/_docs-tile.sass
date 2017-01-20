@@ -1,0 +1,111 @@
+.docs-tile
+  text-align: center
+  &__menu
+    display: flex
+    .title-h1
+      margin-right: auto
+    .button-list
+      border: 1px solid $white_transparent_rgba
+      &:before
+        background: url("../images/Nots_25_List.svg") 50% 50% no-repeat
+        background-size: 24px 24px
+    .button-tile
+      border: 1px solid $white_transparent_rgba
+      margin-left: 8px
+      &:before
+        background: url("../images/Nots_25_Tile.svg") 50% 50% no-repeat
+        background-size: 24px 24px
+  &__main
+    background-color: $light_gray
+  &__header
+    background-color: $white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 24px 48px
+  &__doc-quantity
+    text-transform: uppercase
+    font-size: 12px
+    color: $black_transparent_rgba
+  &__container
+    background: $light_gray
+    padding: 32px
+    display: flex
+    flex-wrap: wrap
+  .doc-ext
+    position: absolute
+    top: -8px
+    left: -8px
+  &__item
+    width: 160px
+    margin: 16px 8px
+    position: relative
+    &:hover
+      .docs-tile__delete, .docs-tile__download
+        visibility: visible
+      .docs-tile__upload
+        visibility: hidden
+  &__preview
+    width: 100%
+    display: block
+  &__upload
+    height: 64px
+  &__doc-name
+    display: block
+    line-height: 1
+    padding: 16px 0 8px
+  &__upload-date
+    font-size: 12px
+    color: $black_transparent_rgba_05
+  &__notes
+    height: 64px
+    position: absolute
+    width: 100%
+    bottom: 0
+    font-size: 0
+  &__delete
+    width: 79px
+    box-sizing: border-box
+    height: 62px
+    background: $white url(/images/Nots_40_Delete.svg) 50% 50% no-repeat
+    background-size: 50%
+    border: 0
+    outline: 0
+    cursor: pointer
+    margin: 2px 1px 0 0
+    visibility: hidden
+  &__download
+    width: 79px
+    box-sizing: border-box
+    height: 62px
+    background: $white url(/images/Nots_40_Download.svg) 50% 50% no-repeat
+    background-size: 50%
+    border: 0
+    outline: 0
+    cursor: pointer
+    margin: 2px 0 0 0
+    visibility: hidden
+  &__attached
+    position: absolute
+    bottom: 100%
+    right: 0
+    width: 56px
+    height: 56px
+    border: 0
+    outline: 0
+    &.code
+      background: url("../images/Nots_28_Note_black0.1.svg") 50% 50% no-repeat, url("../images/Nots_40_Code_block.svg") 50% 50% no-repeat
+      background-size: 50%, 47%
+      background-color: $white
+    &.file
+      background: url("../images/Nots_28_Note_black0.1.svg") 50% 50% no-repeat, url("../images/Nots_24_Note_file.svg") 50% 50% no-repeat
+      background-size: 50%, 40%
+      background-color: $white
+    &.branch
+      background: url("../images/Nots_28_Note_black0.1.svg") 50% 50% no-repeat, url("../images/Nots_24_Note_branch.svg") 50% 55% no-repeat
+      background-size: 50%, 40%
+      background-color: $white
+    &.commit
+      background: url("../images/Nots_28_Note_black0.1.svg") 50% 50% no-repeat, url("../images/Nots_24_Note_commit.svg") 50% 50% no-repeat
+      background-size: 50%, 40%
+      background-color: $white

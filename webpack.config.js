@@ -134,6 +134,8 @@ const plugins = [
     new HtmlWebpackPlugin( addHTML( 'add-files') ),
     new HtmlWebpackPlugin( addHTML( 'list-template') ),
     new HtmlWebpackPlugin( addHTML( 'card-template') ),
+    new HtmlWebpackPlugin( addHTML( 'tabs-menu') ),
+    new HtmlWebpackPlugin( addHTML( 'project-dashboard') ),
 ];
 
 if( NODE_ENV == 'production' ) {

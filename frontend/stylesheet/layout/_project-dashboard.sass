@@ -1,0 +1,274 @@
+.project
+  margin-top: 8px
+  &__container
+    background: $white
+    position: relative
+    margin-bottom: 40px
+  &__pic
+    width: 64px
+    height: 64px
+    border: 1px solid $white
+    border-radius: 50%
+    background: $white
+    position: absolute
+    overflow: hidden
+    top: -29px
+    left: 46px
+    .proj-pic
+      width: 100%
+  &__color
+    height: 6px
+    width: 50%
+    margin-bottom: 8px
+    @include colors-with-bg()
+
+  &__type
+    text-align: right
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 500
+    line-height: 24px
+    margin-right: 24px
+    &.public
+      color: $black_transparent_rgba_04
+    &.private
+      color: $orange
+      &:before
+        content: ""
+        display: inline-block
+        vertical-align: middle
+        width: 20px
+        height: 20px
+        background: url("../images/Nots_24_Private.svg")
+        margin-right: 4px
+  &__main
+    padding: 8px 48px
+  &__title
+    font-size: 38px
+    font-weight: 700
+    margin-bottom: 8px
+  &__description
+    font-size: 14px
+    color: $black_transparent_rgba_04
+    line-height: 1.4
+    margin-bottom: 16px
+    p
+      margin: 0
+  &__info
+    display: flex
+    margin-bottom: 32px
+    &-title
+      text-transform: uppercase
+      color: $black_transparent_rgba_04
+      font-size: 12px
+      line-height: 2
+    &-value
+      font-size: 72px
+  &__fresh-percent
+    flex: 25% 0 0
+    border-right: 1px solid $black_transparent_rgba_01
+    padding: 8px 0 0 48px
+    display: flex
+    flex-direction: column
+  &__notes
+    flex: 25% 0 0
+    border-right: 1px solid $black_transparent_rgba_01
+    padding: 8px 0 0 48px
+    display: flex
+    flex-direction: column
+  &__users
+    display: flex
+    flex-wrap: wrap
+    padding: 16px 0 0 48px
+  &__avatar
+    @include userpic(40px)
+    margin-right: 8px
+    margin-bottom: 8px
+  &__footer
+    background: $light_gray
+    padding: 24px 48px
+    display: flex
+  &__delete
+    border: 0
+    outline: 0
+    background-color: transparent
+    margin-left: auto
+    text-transform: uppercase
+    white-space: nowrap
+    cursor: pointer
+    &::after
+      content: url("../images/Nots_40_Delete.svg")
+      display: inline-block
+      width: 40px
+      height: 40px
+      vertical-align: middle
+      margin-top: -4px
+
+
+  .project__users
+    .add-user_button
+      &:before
+        background: url(../images/Nots_25_Plus.svg) 50% 50% no-repeat
+        background-size: 25px 25px
+      &:after
+        background: $blue
+  .project__users
+    .btn-arrow-right
+      margin-left: auto
+      &::before
+        background: url("../images/Nots_25_Arrow_right.svg")
+    .btn-arrow-right-text
+      white-space: nowrap
+
+
+
+
+// Arrow 1
+
+.flex-container
+  display: flex
+  margin-bottom: 24px
+  margin-right: 24px
+.arrow-right__container
+  display: inline-block
+  width: auto
+  text-align: right
+  margin-left: auto
+  font-size: 0
+
+.arrow-right__arrow
+  display: inline-block
+  width: 40px
+  height: 40px
+  background: url("../images/Nots_25_Arrow_right.svg") 50% 50%
+  border: 1px solid $black_transparent_rgba_01
+  border-radius: 21px
+  background-size: 80%
+  vertical-align: middle
+  transition: background-color 0.08s 0.3s, border  0.08s 0.3s, border-radius  0.08s 0.3s
+
+.arrow-right__inner, .arrow-right__text
+  display: inline-block
+  font-size: 16px
+  vertical-align: middle
+
+
+.arrow-right__text
+  background: $black_transparent_rgba_01
+  border-radius: 21px 0 0 21px
+  line-height: 40px
+  &:before
+    content: ""
+    display: inline-block
+    width: 16px
+
+.arrow-right__inner
+  white-space: nowrap
+  display: inline-block
+  border-radius: 21px
+
+.arrow-right__inner .arrow-right__text
+  width: 0
+  overflow: hidden
+  transition: width 0.3s ease-in-out
+  box-sizing: content-box
+
+.arrow-right__container:hover .arrow-right__inner .arrow-right__text
+  width: 100%
+
+.arrow-right__container:hover .arrow-right__arrow
+  border: 1px solid transparent
+  border-radius: 0 21px 21px 0
+  background-color: $black_transparent_rgba_01
+  transition: background-color 0.01s , border  0.01s , border-radius  0.01s
+
+
+  //Arrow 2
+
+.arrow-r__container
+  display: inline-block
+  width: auto
+  text-align: right
+  margin-left: auto
+  font-size: 0
+
+.arrow-r__arrow
+  display: inline-block
+  width: 40px
+  height: 40px
+  background: url("../images/Nots_25_Arrow_right.svg") 50% 50%
+  border: 1px solid $black_transparent_rgba_01
+  border-radius: 21px
+  background-size: 80%
+  vertical-align: middle
+  transition: background-color 0.08s 0.3s, border  0.08s 0.3s, border-radius  0.08s 0.3s
+
+.arrow-r__inner, .arrow-r__text
+  display: inline-block
+  font-size: 16px
+  vertical-align: middle
+
+
+.arrow-r__text
+  background: $black_transparent_rgba_01
+  border-radius: 21px 0 0 21px
+  line-height: 40px
+  &:before
+    content: ""
+    display: inline-block
+    width: 16px
+
+.arrow-r__inner
+  white-space: nowrap
+  display: inline-block
+  border-radius: 21px
+
+.arrow-r__inner .arrow-r__text
+  width: 0
+  overflow: hidden
+  transition: width 0.3s ease-in-out 0.15s
+  box-sizing: content-box
+
+.arrow-r__container:hover .arrow-r__inner .arrow-r__text
+  width: 100%
+
+.arrow-r__container:hover .arrow-r__arrow
+  border: 1px solid transparent
+  border-radius: 0 21px 21px 0
+  transition: border  0.01s , border-radius  0.01s
+
+
+.arrow-r__arrow
+  position: relative
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    border-radius: 21px
+    border: 1px solid transparent
+    transform: translate(-50%, -50%)
+    opacity: 0
+    top: 50%
+    left: 50%
+    width: 0
+    height: 0
+    background: transparent
+    z-index: 1
+    transition: width  0.2s 0.4s, height  0.2s 0.4s, opacity 0.2s 0.6s, background 0.2s 0.6s, border-radius 0.2s ease-in-out 0.35s
+
+.arrow-r__container:hover .arrow-r__arrow
+  &:after
+    width: 100%
+    height: 100%
+    background: $black_transparent_rgba_01
+    opacity: 1
+    border-radius: 0 21px 21px 0
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, border-radius 0.1s ease-in-out 0.1s
+
+
+
+
+
+
+
+
