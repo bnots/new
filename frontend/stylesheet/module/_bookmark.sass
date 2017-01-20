@@ -1,0 +1,89 @@
+
+// init class
+.bookmark--active
+  & .bookmark__corner
+    &::before
+      transform: perspective(900px) rotate3d(1, 1, 0, 90deg)
+    &::after
+      transform: perspective(900px) rotate3d(1, 1, 0, 0deg)
+      transition-duration: .5s
+
+// main style
+.bookmark
+  cursor: pointer
+  position: absolute
+  top: 0
+  right: 0
+  width: 32px
+  height: 32px
+  border-bottom-left-radius: 8px
+  overflow: hidden
+  border-bottom: 1px solid $black_transparent_rgba_01
+  border-left: 1px solid $black_transparent_rgba_01
+  visibility: hidden
+  opacity: 0
+  &:hover
+    .bookmark
+      &__corner
+        &::before
+          transform: rotate3d(1, 1, 0, 90deg)
+          border-top-color: $white_transparent_rgba
+          border-right-color: $white_transparent_rgba
+  &__wrapper
+    position: relative
+    width: 100%
+    height: 100%
+  &__border
+    width: 100%
+    height: 100%
+    &::after
+      content: ""
+      width: 48px
+      height: 48px
+      position: absolute
+      top: -27px
+      right: -24px
+      background-color: $black
+      transform: rotate(45deg)
+      transform-origin: 50% 50%
+    &:before
+      content: ""
+      width: 48px
+      height: 48px
+      position: absolute
+      background-color: $light_gray
+      top: 8px
+      right: 8px
+      z-index: 1
+      border-right: 1px dashed $black_transparent_rgba_02
+      transform: rotate(-45deg)
+      transform-origin: 50% 50%
+
+  &__corner
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    &::before, &::after
+      position: absolute
+      width: 0
+      height: 0
+      transition: all .5s
+      transform-origin: 50% 50%
+      content: ''
+      z-index: 5
+    &::after
+      transform: perspective(900px) rotate3d(1, 1, 0, 90deg)
+      transition: transform .1s
+      width: 32px
+      height: 32px
+      background: url('#{$imgurl}/Nots_32_Bookmark_yellow.svg') no-repeat center
+    &--hover
+      &::before
+        border: 16px solid transparent
+        border-top: 16px solid $light_gray
+        border-right: 16px solid $light_gray
+        transform: perspective(900px) rotate3d(1, 1, 0, 0deg)
+
+

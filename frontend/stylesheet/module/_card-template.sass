@@ -3,10 +3,6 @@ $card: card
 $card-padding-top: 16px
 $card-padding-left: 48px
 // ------------
-@mixin hide()
-  &.hide
-    display: none
-
 @mixin files-pic($wrap-container, $offset: -8px, $size: 24px)
   &--file, &--branch, &--commit, &--code
     @if ($wrap-container)
@@ -63,8 +59,31 @@ $card-padding-left: 48px
       &::before
         background: url("#{$imgurl}/Nots_24_Note_code.svg") no-repeat center
 
+//delete
 .card
   display: block
+  &:hover
+    .card
+      &__head
+        &::after
+          height: 100%
+        .user-info
+          &__activity
+            opacity: 1
+            margin-top: 0
+        > .bookmark
+          visibility: visible
+          opacity: 1
+          transition-delay: .15s
+          transition-duration: .3s
+
+      &__tags, &__action
+        visibility: visible
+        opacity: 1
+        transition-delay: .15s
+        transition-duration: .3s
+//-----------------
+
 
 // extend classes
 %add-tag-button
@@ -109,6 +128,18 @@ $card-padding-left: 48px
     padding: $card-padding-top $card-padding-left
     background-color: $white
     position: relative
+    z-index: 1
+    &::after
+      transition: height .3s
+      content: ''
+      position: absolute
+      margin: auto
+      top: 0
+      right: 0
+      left: 0
+      background-color: $light_gray
+      z-index: -1
+      height: 0
     // wrapper
     &-wrapper
       display: flex
@@ -153,6 +184,9 @@ $card-padding-left: 48px
     display: flex
     justify-content: flex-start
     margin-left: 24px
+    opacity: 0
+    visibility: hidden
+    transition: opacity .15s
     &-empty
       @extend %add-tag-button
       display: none
@@ -184,11 +218,13 @@ $card-padding-left: 48px
     display: none
     cursor: pointer
     border-radius: 4px
-    transition: background-color .3s
+    visibility: hidden
+    opacity: 0
+    transition: background-color .3s, opacity .15s
     &:not(:last-child)
       margin-right: 8px
     &:hover
-      background-color: $light_gray
+      background-color: $black_transparent_rgba_01
 
     &-wrapper
       display: flex
@@ -248,16 +284,3 @@ $card-padding-left: 48px
     margin-right: 16px
 
 
-.user-info
-  @include userpic(32px)
-  display: flex
-  align-items: center
-  &__data
-    margin-left: 8px
-  &__name
-    color: $black
-    text-transform: uppercase
-    font-size: 12px
-  &__activity
-    color: $black_transparent_rgba
-    font-size: 12px
