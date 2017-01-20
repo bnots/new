@@ -3,7 +3,7 @@ $card: card
 $card-padding-top: 16px
 $card-padding-left: 48px
 // ------------
-@mixin files-pic($wrap-container, $offset: -8px, $size: 24px)
+@mixin files-pic($wrap-container: false, $offset: -8px, $size: 24px)
   &--file, &--branch, &--commit, &--code
     @if ($wrap-container)
       .#{$wrap-container}
@@ -80,7 +80,6 @@ $card-padding-left: 48px
 
 // main classes
 .#{$card}
-
   // init click
   &:hover
     .#{$card}
@@ -222,7 +221,7 @@ $card-padding-left: 48px
     &:not(:last-child)
       margin-right: 8px
     &:hover
-      background-color: $black_transparent_rgba_01
+      background-color: $white
 
     &-wrapper
       display: flex
@@ -237,16 +236,21 @@ $card-padding-left: 48px
   // context
   &__context
     background-color: $white
-    padding: 40px 48px
+    padding: 40px 104px 40px 48px
     position: relative
 
   &__title
     font-size: 28px
     font-weight: 500
-    margin-bottom: 32px
+    margin-bottom: 16px
     color: $black
     display: flex
     align-items: center
+
+  &__description
+    color: $black
+    line-height: 1.7
+    margin-bottom: 24px
 
   &__fresh
     font-size: 12px
@@ -280,5 +284,66 @@ $card-padding-left: 48px
     font-size: 12px
     color: $black
     margin-right: 16px
+    display: none
+
+  &__comments
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 24px 0
+
+  &__buttons
+    display: flex
 
 
+.paths
+  display: flex
+  margin-bottom: 24px
+  max-width: 100%
+  overflow: hidden
+  &__wrapper
+    overflow: hidden
+    padding-left: 24px
+    &:not(:last-child)
+      max-width: 33%
+      margin-right: 24px
+  &__item
+    @include files-pic($offset: -4px)
+    min-height: 24px
+    flex-shrink: 0
+    text-transform: uppercase
+    font-size: 12px
+    color: $black
+    display: flex
+    align-items: center
+    white-space: nowrap
+    cursor: pointer
+    transition: color .3s
+    &:hover
+      color: $blue
+
+.attachment
+  background-color: $light_gray
+  padding: 0 48px
+  &__download
+    border-radius: 4px
+    margin-left: 16px
+    cursor: pointer
+    background: url('#{$imgurl}/Nots_40_Download.svg') no-repeat center
+    width: 40px
+    height: 40px
+    transition: background-color .3s
+    &:hover
+      background-color: $white
+  &__name
+    color: $black
+    margin-right: 8px
+  &__item
+    display: flex
+    align-items: center
+    padding: 24px 0
+    &:not(:last-child)
+      border-bottom: 1px solid $black_transparent_rgba_02
+    &-wrapper
+      display: flex
+      align-items: center
