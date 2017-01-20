@@ -42,13 +42,131 @@
         Commit pre-release beta 1.0
         .card__fresh.fr_1 78%
           .card__fresh-text Fresh rate
-      .card__paths
-      
-      
+  
+      .card__description
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quos ipsam ad, consequatur expedita quam earum placeat at illo sunt iure inventore molestiae sapiente? Quis tempora et, quos saepe cum error est voluptatibus nostrum, eligendi dicta, aut, veritatis similique molestiae. Et ratione aspernatur pariatur error debitis rerum explicabo architecto id.
+  
+      .paths
+        .paths__wrapper
+          .paths__item.paths__item--branch master
+        .paths__wrapper
+          .paths__item.paths__item--commit commit name
+        .paths__wrapper
+          .paths__item.paths__item--file https:// lorem / ipsum / 21 / index.js
+  
+      .card__code
+        %code.code-block
+          %table.code-block__table{cellspacing:'0',cellpadding:'0',border:'0'}
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 1
+              %td.code-block__cell.code-block__cell--code const getItem = document.getElementById('id');
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 2
+              %td.code-block__cell.code-block__cell--code function getItemWidth(item) {
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 3
+              %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;let itemWidth = item.outerWidth(true);
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 4
+              %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;return itemWidth;
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 5
+              %td.code-block__cell.code-block__cell--code }
+            %tr.code-block__row
+              %td.code-block__cell.code-block__cell--number 6
+              %td.code-block__cell.code-block__cell--code console.log( getItemWidth(getItem) );
+        %p.code-block__comment
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quos ipsam ad, consequatur expedita quam earum placeat at illo sunt iure inventore molestiae sapiente? Quis tempora et, quos saepe cum error est voluptatibus nostrum, eligendi dicta, aut, veritatis similique molestiae. Et ratione aspernatur pariatur error debitis rerum explicabo architecto id.
+  
+      .card__comments
+        .add-message.add-message--output
+          .add-message__content
+            .add-message__photo
+              %a.add-message__photo{href:'#'}
+                .avatar_wrapper
+                  %img.add-message__img(src='images/userpic.png' alt='')
+            .add-message__text-container
+              .add-message__text
+                asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+              .add-message__info
+                .add-message__user-name
+                  you
+                .add-message__date-message
+                  Match 22
+    
+        .add-message.add-message--input
+          .add-message__content
+            .add-message__photo
+              %a.add-message__photo{href:'#'}
+                .avatar_wrapper
+                  %img.add-message__img(src='images/userpic.png' alt='')
+            .add-message__text-container
+              .add-message__text
+                asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+              .add-message__info
+                .add-message__user-name
+                  Borya
+                .add-message__date-message
+                  Match 22
+    
+        .add-message.add-message--private
+          .add-message__content
+            .add-message__photo
+              .avatar_private
+                Private
+            .add-message__text-container
+              .add-message__text
+                asdf asdfasdfadf asdf asd fa sdfa sdf asdf as asdadf ad
+              .add-message__info
+                .add-message__user-name
+                  you
+                .add-message__date-message
+                  Match 22
+    
+        .add-message.add-message--typing
+          .add-message__content
+            .add-message__photo
+              %a.add-message__photo{href:'#'}
+                .avatar_wrapper
+                  %img.add-message__img(src='images/userpic.png' alt='')
+            .add-message__text-container
+              .add-message__info
+                .add-message__user-name
+                  you
+                .add-message__typing
+                  is typing...
+  
+  
       -# end edit context-----
+  
+      // button
+      .card__buttons
+        %button.orange Add comment
+  
+      // more and to context
       .card__to-context
-        %button.card__open.icon_button
+        .arrow-r__container
+          .arrow-r__inner
+            .arrow-r__text To context
+          .arrow-r__arrow
       .card__open-wrapper
         .card__open-text Hide
         %button.card__open.icon_button
+  
+    .attachment
+      .attachment__item
+        .attachment__item-wrapper
+          .attachment__name Lorem ipsum dolor
+          %span.doc-ext.xls xls
+        .attachment__download
+      .attachment__item
+        .attachment__item-wrapper
+          .attachment__name Lorem ipsum dolor sit amet
+          %span.doc-ext.pdf pdf
+        .attachment__download
+      .attachment__item
+        .attachment__item-wrapper
+          .attachment__name Lorem
+          %span.doc-ext.docx docx
+        .attachment__download
   
