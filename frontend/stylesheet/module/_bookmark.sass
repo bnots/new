@@ -1,12 +1,15 @@
 
 // init class
-.bookmark--active
-  & .bookmark__corner
-    &::before
-      transform: perspective(900px) rotate3d(1, 1, 0, 90deg)
-    &::after
-      transform: perspective(900px) rotate3d(1, 1, 0, 0deg)
-      transition-duration: .5s
+.bookmark
+  &.bookmark--active
+    visibility: visible
+    opacity: 1
+    & .bookmark__corner
+      &::before
+        transform: perspective(900px) rotate3d(1, 1, 0, 90deg)
+      &::after
+        transform: perspective(900px) rotate3d(1, 1, 0, 0deg)
+        transition-duration: .5s
 
 // main style
 .bookmark
