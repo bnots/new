@@ -8,6 +8,15 @@
   height: 100%
   align-items: center
 
+  &.hide
+    .users-list
+      &__container-wrapper
+        &::before
+          display: none
+      &__wrapper
+        max-width: 128px
+        overflow: hidden
+
   &__button
     width: 24px
     height: 24px
@@ -39,20 +48,11 @@
       left: 0
       top: 0
       bottom: 0
-      background: linear-gradient(to right, transparent, $light_blue)
+      background: linear-gradient(to right, transparent, $white)
       transition: background .3s
   &__container
     display: flex
     justify-content: flex-end
-
-  &.hide
-    .users-list
-      &__container-wrapper
-        &::before
-          display: none
-      &__wrapper
-        max-width: 128px
-        overflow: hidden
 
   &__wrapper
     display: flex
