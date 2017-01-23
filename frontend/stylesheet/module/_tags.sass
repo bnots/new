@@ -55,16 +55,19 @@
     visibility: hidden
     height: 100%
     cursor: pointer
-  &__addbtn
+  .add_button
     width: 40px
     height: 40px
     border-radius: 50%
     border: 1px solid $black_transparent_rgba_05
     margin-right: 16px
-    &-text
-      color: $black
-      text-transform: uppercase
-      font-size: 12px
+    &:before
+      background: url(../images/Nots_25_Plus.svg) 50% 50% no-repeat
+      background-size: 28px 28px
+  &__addbtn-text
+    color: $black
+    text-transform: uppercase
+    font-size: 12px
   .tabs-name
     white-space: nowrap
     overflow: hidden

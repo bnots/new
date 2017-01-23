@@ -34,16 +34,10 @@
     height: 40px
     position: relative
     left: -8px
-    &.icon_button::before
-      content: '+'
-      background: none
-      width: 40px
-      height: 40px
-      display: flex
-      justify-content: center
-      align-items: center
-      font-size: 32px
-      font-weight: 300
+    &.icon_button
+      &:before
+        background: url(../images/Nots_25_Plus.svg) 50% 50% no-repeat
+        background-size: 28px 28px
     &-container
       display: flex
       align-items: center
