@@ -83,6 +83,8 @@ $card-padding-left: 48px
   // init click
   &:hover
     .#{$card}
+      &__context
+        padding-top: 40px
       &__head
         &::after
           height: 100%
@@ -236,8 +238,9 @@ $card-padding-left: 48px
   // context
   &__context
     background-color: $white
-    padding: 40px 104px 40px 48px
+    padding: 8px 104px 40px 48px
     position: relative
+    transition: all .3s
 
   &__title
     font-size: 28px

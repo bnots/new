@@ -67,7 +67,7 @@ const plugins = [
         }, {
             context: __dev,
             from   : 'fonts/**',
-            to     : config.dist.css
+            to     : path.join('css')
         }, {
             context: path.join( config.dev.js, 'vendors' ),
             from   : '**',
