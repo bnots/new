@@ -44,31 +44,34 @@
               .logo-block
                 .logo-block__pic{style:'background: transparent url("images/codepen_icon.png") no-repeat center; background-size: 32px 32px;'}
                 .logo-block__name Codepen
-  
-          .paths
-            .paths__item.paths__item--branch master
-            .paths__item.paths__item--commit commit name
-            .paths__item.paths__item--file https:// lorem / ipsum / 21 / index.js
-    
-    
-          .code-container__content
-            %code.code-block
-              %table.code-block__table{cellspacing:'0',cellpadding:'0',border:'0'}
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 1
-                  %td.code-block__cell.code-block__cell--code const getItem = document.getElementById('id');
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 2
-                  %td.code-block__cell.code-block__cell--code function getItemWidth(item) {
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 3
-                  %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;let itemWidth = item.outerWidth(true);
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 4
-                  %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;return itemWidth;
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 5
-                  %td.code-block__cell.code-block__cell--code }
-                %tr.code-block__row
-                  %td.code-block__cell.code-block__cell--number 6
-                  %td.code-block__cell.code-block__cell--code console.log( getItemWidth(getItem) );
+          .code-container__wrapper
+            .paths
+              .paths__wrapper
+                .paths__item.paths__item--branch master
+              .paths__wrapper
+                .paths__item.paths__item--commit commit name
+              .paths__wrapper
+                .paths__item.paths__item--file https:// lorem / ipsum / 21 / index.js
+          
+      
+            .code-container__content
+              %code.code-block
+                %table.code-block__table{cellspacing:'0',cellpadding:'0',border:'0'}
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 1
+                    %td.code-block__cell.code-block__cell--code const getItem = document.getElementById('id');
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 2
+                    %td.code-block__cell.code-block__cell--code function getItemWidth(item) {
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 3
+                    %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;let itemWidth = item.outerWidth(true);
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 4
+                    %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;return itemWidth;
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 5
+                    %td.code-block__cell.code-block__cell--code }
+                  %tr.code-block__row
+                    %td.code-block__cell.code-block__cell--number 6
+                    %td.code-block__cell.code-block__cell--code console.log( getItemWidth(getItem) );
