@@ -52,11 +52,13 @@
     align-items: center
     margin-left: 40px
     &-input
-      border: 1px solid $black
+      border: 2px solid $black
       border-radius: 4px
-      padding: 0 4px
-      height: 24px
       margin-right: 16px
+      font-size: 13px
+      padding: 3px 8px 4px
+      font-weight: 500
+      text-transform: uppercase
       &:focus
         outline: none
       @include colors-with-border()
@@ -65,8 +67,8 @@
       border-radius: 4px
       display: flex
     &-color
-      width: 24px
-      height: 24px
+      width: 28px
+      height: 28px
       @include colors-with-bg()
     &-label
       display: block
@@ -91,8 +93,9 @@
     &-text
       text-transform: uppercase
       font-size: 12px
-      color: $black
+      color: $black_transparent_rgba_07
       margin-left: 16px
+      font-weight: 500
 
   &__add-btn.orange_filled
     margin-right: 0
