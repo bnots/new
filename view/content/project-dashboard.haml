@@ -12,7 +12,9 @@
     .project__info
       .project__fresh-percent
         %span.project__info-title fresh rate
-        %span.project__info-value 60%
+        %span
+          %span.project__info-value 60
+          %span.project__info-percent %
       .project__notes
         %span.project__info-title  notes
         %span.project__info-value 126
@@ -35,6 +37,7 @@
       %button.orange_filled edit project info
       %button.project__delete remove project
 
+%h1.project-card__title Most outdated
 %section.project-card
   .project-card__header
     .card__title New function description
@@ -49,7 +52,69 @@
             Borja
       .project-card__header-text Changed code associated with note. November 27, 2015
   .project-card__main
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .paths
+      .paths__wrapper
+        .paths__item.paths__item--branch master
+      .paths__wrapper
+        .paths__item.paths__item--commit commit name
+      .paths__wrapper
+        .paths__item.paths__item--file https:// lorem / ipsum / 21 / index.js
+      .arrow-r__container
+        %span.arrow-r__inner
+          %span.arrow-r__text To context
+        %span.arrow-r__arrow>
+
+    .card__code
+      %code.code-block
+        %table.code-block__table{cellspacing:'0',cellpadding:'0',border:'0'}
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 1
+            %td.code-block__cell.code-block__cell--code const getItem = document.getElementById('id');
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 2
+            %td.code-block__cell.code-block__cell--code function getItemWidth(item) {
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 3
+            %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;let itemWidth = item.outerWidth(true);
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 4
+            %td.code-block__cell.code-block__cell--code &nbsp;&nbsp;&nbsp;&nbsp;return itemWidth;
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 5
+            %td.code-block__cell.code-block__cell--code }
+          %tr.code-block__row
+            %td.code-block__cell.code-block__cell--number 6
+            %td.code-block__cell.code-block__cell--code console.log( getItemWidth(getItem) );
+      %p.code-block__comment
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quos ipsam ad, consequatur expedita quam earum placeat at illo sunt iure inventore molestiae sapiente? Quis tempora et, quos saepe cum error est voluptatibus nostrum, eligendi dicta, aut, veritatis similique molestiae. Et ratione aspernatur pariatur error debitis rerum explicabo architecto id.
+
+  .project-card__footer
+    %button.orange_filled edit note
+    %button.blue note is ok
+
+%section.project-card
+  .project-card__header
+    .card__title New file without notes
+    .project-card__header-info
+      %a.user-info{href:'#'}
+        .user-info__photo.avatar_wrapper
+          %img.user-info__img{src:'images/userpic.jpg', alt:'pic'}
+        .user-info__data
+          .user-info__name
+            Borusik
+      .project-card__header-text Created file. November 27, 2015
+  .project-card__main
+    .paths
+      .paths__wrapper
+        .paths__item.paths__item--branch master
+      .paths__wrapper
+        .paths__item.paths__item--commit commit name
+      .paths__wrapper
+        .paths__item.paths__item--file https:// lorem / ipsum / 21 / index.js
+      .arrow-r__container
+        %span.arrow-r__inner
+          %span.arrow-r__text To context
+        %span.arrow-r__arrow>
   .project-card__footer
     %button.orange_filled edit note
     %button.blue note is ok
