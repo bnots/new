@@ -3,16 +3,33 @@
     .add-tag__input-field
       %input.add-tag__input.tabs-name.tabs-name--input.colors-border--1(type="text")
     .add-tag__colors
-      %ul.add-tag__colors-list
-        %li.add-tag__colors-item.colors-bg--1.add-tag__colors-item--selected
-        %li.add-tag__colors-item.colors-bg--2
-        %li.add-tag__colors-item.colors-bg--3
-        %li.add-tag__colors-item.colors-bg--4
-        %li.add-tag__colors-item.colors-bg--5
-        %li.add-tag__colors-item.colors-bg--6
-        %li.add-tag__colors-item.colors-bg--7
-        %li.add-tag__colors-item.colors-bg--8
-        %li.add-tag__colors-item.colors-bg--9
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--1', checked:'checked'}
+        .add-tag__bg.colors-bg--1
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--2'}
+        .add-tag__bg.colors-bg--2
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--3'}
+        .add-tag__bg.colors-bg--3
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--4'}
+        .add-tag__bg.colors-bg--4
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--5'}
+        .add-tag__bg.colors-bg--5
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--6'}
+        .add-tag__bg.colors-bg--6
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--7'}
+        .add-tag__bg.colors-bg--7
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--8'}
+        .add-tag__bg.colors-bg--8
+      %label.add-tag__label
+        %input.add-tag__radio{type:'radio', name:'add-tag-colors', value:'colors-bg--9'}
+        .add-tag__bg.colors-bg--9
           
   .add-tag__wrapper.add-tag__wrapper--button
     %button.add-tag__button-add.orange_filled add tag
