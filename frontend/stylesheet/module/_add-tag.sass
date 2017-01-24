@@ -14,32 +14,45 @@
     &--button
       padding: 24px 0
 
-  &__colors-item
+  &__colors
+    display: flex
+  &__label
     width: 40px
     height: 40px
+    display: block
     border-radius: 4px
-    display: inline-block
-    margin-right: 8px
+    overflow: hidden
+    position: relative
     cursor: pointer
-    &:last-child
-      margin-right: 0
-    &--selected
-      position: relative
-      &::before
-        content: ''
-        background: url("../images/Nots_24_White_v_big.svg") no-repeat center
-        background-size: 100%
-        display: block
-        position: absolute
-        width: 24px
-        height: 24px
-        margin: auto
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
+    &:not(:last-child)
+      margin-right: 8px
+  &__radio
+    display: none
+    &:checked
+      + .add-tag__bg
+        &::before
+          content: ''
+          background: url("../images/Nots_24_White_v_big.svg") no-repeat center
+          background-size: 100%
+          display: block
+          position: absolute
+          width: 24px
+          height: 24px
+          margin: auto
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
 
+  &__bg
+    position: absolute
+    margin: auto
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
     @include colors-with-bg()
+
 
   &__button-add.orange_filled
     margin-right: 0
